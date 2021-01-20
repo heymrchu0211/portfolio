@@ -26,11 +26,11 @@ body {
   background-color: #f2f2fc;
   overflow-y: auto;
 
-  @include large {
+  @include large-device {
     left: 30.4rem;
   }
 
-  @include medium {
+  @include medium-device {
     left: 0;
   }
 
@@ -53,7 +53,7 @@ h2 {
   font-size: 3rem;
   font-weight: 700;
 
-  @include large {
+  @include large-device {
     font-size: 2.7rem;
   }
 }
@@ -61,7 +61,7 @@ h2 {
 .section:not(:first-child) {
   padding-top: 7rem;
 
-  @include medium {
+  @include medium-device {
     padding-top: 10rem;
   }
 
@@ -92,7 +92,7 @@ h2 {
     margin: 5rem 0;
     font-size: 1.9rem;
 
-    @include small {
+    @include small-device {
       font-size: 1.6rem;
     }
   }

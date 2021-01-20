@@ -57,11 +57,11 @@
     z-index: 9;
   }
 
-  @include large {
+  @include large-device {
     width: 30.4rem;
   }
 
-  @include medium {
+  @include medium-device {
     transform: translateX(-100%);
     z-index: 11;
   }
@@ -78,7 +78,7 @@
     font-size: 3.8rem;
     color: $color-primary;
   
-    @include large {
+    @include large-device {
       font-size: 3.2rem;
     }
   
@@ -112,7 +112,7 @@
     font-size: 1.8rem;
     transition: margin-left .4s;
 
-    @include large {
+    @include large-device {
       font-size: 1.6rem;
     }
 
@@ -179,7 +179,7 @@
   cursor: pointer;
   transition: .3s;
 
-  @include medium {
+  @include medium-device {
     display: block;
   }
 }
@@ -260,7 +260,7 @@
     border-radius: 50%;
     overflow: hidden;
 
-    @include small {
+    @include small-device {
       width: 22rem;
       height: 22rem;
     }
@@ -280,11 +280,11 @@
     line-height: 1.6em;
     margin-top: 3.6rem;
 
-    @include large {
+    @include large-device {
       font-size: 2.8rem;
     }
 
-    @include small {
+    @include small-device {
       font-size: 2rem;
     }
 
@@ -308,11 +308,11 @@
     font-size: 2rem;
     line-height: 1.6em;
 
-    @include large {
+    @include large-device {
       font-size: 1.8rem;
     }
 
-    @include small {
+    @include small-device {
       font-size: 1.6rem;
     }
   }
@@ -443,11 +443,11 @@
     margin: 0 1.5rem 3rem;
     background-color: #fdf9ff;
     
-    @include extra-large {
+    @include extra-large-device-device {
       width: calc(50% - 3rem);
     }
 
-    @include large {
+    @include large-device {
       width: calc(100% - 3rem);
     }
 
@@ -487,11 +487,11 @@
     margin: 0 1.5rem 3rem;
     overflow: hidden;
 
-    @include extra-large {
+    @include extra-large-device-device {
       width: calc(50% - 3rem);
     }
 
-    @include large {
+    @include large-device {
       width: calc(100% - 3rem);
     }
   }
@@ -581,7 +581,7 @@
       background-color: #fff;
       transition: .4s;
 
-      @include medium {
+      @include medium-device {
         width: 90%;
       }
     }
@@ -595,7 +595,7 @@
         font-size: 3rem;
         font-weight: 700;
 
-        @include small {
+        @include small-device {
           font-size: 2rem;
         }
       }
@@ -606,7 +606,7 @@
       justify-content: space-between;
       margin: 2rem 0;
 
-      @include medium {
+      @include medium-device {
         flex-direction: column;
       }
       
@@ -614,7 +614,7 @@
         line-height: 1.4em;
         font-size: 1.8rem;
 
-        @include small {
+        @include small-device {
           margin-bottom: 1rem;
           font-size: 1.4rem;
         }
@@ -629,7 +629,7 @@
     &__worker-number {
       font-size: 1.8rem;
 
-      @include small {
+      @include small-device {
         font-size: 1.4rem;
       }
 
@@ -651,7 +651,7 @@
       color: #fff;
       transition: .4s;
 
-      @include small {
+      @include small-device {
         font-size: 1.3rem;
       }
 
@@ -696,13 +696,13 @@
       transform: translate(100%,-100%); 
       cursor: pointer;
 
-      @include medium {
+      @include medium-device {
         width: 4rem;
         height: 4rem;
         transform: translate(-2rem, 2rem);
       }
 
-      @include small {
+      @include small-device {
         width: 3rem;
         height: 3rem;
         transform: translate(-2rem, 2rem);
@@ -719,11 +719,11 @@
         height: 3px;
         background-color: #fff;
 
-        @include medium {
+        @include medium-device {
           width: 20px;
         }
 
-        @include small {
+        @include small-device {
           width: 15px;
         }
       }
@@ -757,12 +757,12 @@
       height: 20rem;
       box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
 
-      @include large {
+      @include large-device {
         width: 30rem;
         height: 15rem;
       }
 
-      @include small {
+      @include small-device {
         width: 20rem;
         height: 10rem;
       }
@@ -800,7 +800,7 @@
       background-color: rgba(0,0,0,.2);
       cursor: pointer;
 
-      @include small {
+      @include small-device {
         width: 2.5rem;
         height: 2.5rem;
       }
@@ -823,7 +823,7 @@
         
         @include fontawesome;
 
-        @include small {
+        @include small-device {
           font-size: 2rem;
         }
       }
@@ -832,11 +832,11 @@
     &__button-prev {
       left: 20%;
 
-      @include extra-large {
+      @include extra-large-device-device {
         left: 10%;
       }
 
-      @include small {
+      @include small-device {
         left: 5%;
       }
 
@@ -848,11 +848,11 @@
     &__button-next {
       right: 20%;
 
-      @include extra-large {
+      @include extra-large-device-device {
         right: 10%;
       }
 
-      @include small {
+      @include small-device {
         right: 5%;
       }
 
@@ -876,7 +876,7 @@
         line-height: 1.8em;
         font-size: 1.7rem;
 
-        @include small {
+        @include small-device {
           line-height: 1.7em;
           font-size: 1.4rem;
         }
@@ -890,7 +890,7 @@
           height: 6px;
           background-color: $color-primary;
 
-          @include small {
+          @include small-device {
             top: .8rem;
           }
         }

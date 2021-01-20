@@ -18,23 +18,23 @@
 
 /************************ breakpoints ***********************/
 
-@mixin extra-large {
+@mixin extra-large-device {
   @media (max-width: $breakpoints-extra-large) {
     @content;
   }
 }
 
-@mixin large {
+@mixin large-device {
   @media (max-width: $breakpoints-large) {
     @content;
   }
 }
-@mixin medium {
+@mixin medium-device {
   @media (max-width: $breakpoints-medium) {
     @content;
   }
 }
-@mixin small {
+@mixin small-device {
   @media (max-width: $breakpoints-small) {
     @content;
   }
