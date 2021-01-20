@@ -1,0 +1,1232 @@
+@import 'variable', 'mixin';
+
+/******************** header ********************/
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.7rem 2.5rem 0;
+
+  @include inner;
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 6.3rem;
+    transform: translateX(-50%);
+  
+    a {
+      display: block;
+    }
+  }
+
+  &__nav {
+    flex: 1;
+  }
+
+  &__nav-list {
+    display: flex;
+    text-align: center;
+
+    @include medium-device {
+      display: none;
+    }
+  }
+
+  &__nav-item  {
+    flex: 1;
+    font-size: 1.8rem; 
+    font-weight: 700;
+  }
+
+  &__btn-hamburger {
+    height: 4rem;
+  }
+}
+
+.all-menu-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #008fb4;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+  }
+
+  &.active:after {
+    opacity: .5;
+    visibility: visible;
+  }
+}
+
+.all-menu {
+  background: #fff;
+  transform: translate(0,-100%);
+  transition: .4s;
+
+  @include medium-device {
+    width: 32rem;
+    height: 100%;
+    margin-left: auto;
+    transform: translate(100%,0);
+  }
+
+  .active & {
+    transform: translate(0,0);
+    // transform: translateY(0);
+  }
+
+  &__top {
+    position: relative;
+    height: 12rem;
+    padding: 7rem 0 2.6rem;
+    text-align: center;
+
+    @include inner;
+  }
+
+  &__logo {
+    @include medium-device {
+      display: none;
+    }
+  }
+
+  &__link-login {
+    display: none;
+    padding-left: 2rem;
+    text-align: left;
+    font-size: 1.9rem;
+
+    a {
+      display: inline-block;
+      padding-left: 4rem;
+      background: url(../images/ico_login.svg) no-repeat left;
+      color: #01b4d0;
+    }
+
+    @include medium-device{
+      display: block;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 0;
+
+    @include medium-device {
+      position: absolute;
+      right: 1.7rem;
+      top: 2.3rem;
+    }
+  }
+
+  &__nav {
+    padding-top: 1.5rem;
+    border-top: 1px solid #ebebeb;
+
+    @include medium-device{
+      padding-top: 0;
+    }
+  }
+
+  &__1depth-list {
+    display: flex;
+
+    @include inner;
+    @include medium-device{
+      display: block;
+    }
+  }
+
+  &__1depth-item {
+    flex: 1;
+    border-right: 1px solid #ebebeb;
+    text-align: center;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    @include medium-device{
+      text-align: left;
+      &:nth-child(1) li,
+      &:nth-child(4) li {
+        width: 50%;
+      }
+    }
+  }
+
+  &__1depth-text {
+    position: relative;
+    padding-left: 3rem;
+    background-repeat: no-repeat;
+    background-position: left;
+    font-size: 1.9rem;
+    font-weight: 500;
+
+    &--mykick {
+      background-image: url(../images/ico_mykick.svg);
+    }
+
+    &--refuel {
+      background-image: url(../images/ico_refuel.svg);
+    }
+
+    &--add {
+      background-image: url(../images/ico_add.svg);
+    }
+
+    &--enjoy {
+      background-image: url(../images/ico_enjoy.svg);
+    }
+
+    &--together {
+      background-image: url(../images/ico_together.svg);
+    }
+
+    @include medium-device{
+      display: block;
+      padding: 2.2rem 0 2.2rem 6rem;
+      border-bottom: 1px solid #e5e5e5;
+      background-repeat: no-repeat;
+      background-position: 2.5rem;
+      font-size: 1.6rem;
+
+      &:hover {
+        background-color: #f7f8f9;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 2.6rem;
+        top: 2.6rem;
+        padding: 3px;
+        border-style: solid;
+        border-width: 0 0 1px 1px;
+        border-color: #8e8e8e;
+        transform: rotate(-45deg);
+        transition: .4s;
+      }  
+
+      &.active:after {
+        transform: rotate(135deg);
+      }
+    }
+  }
+
+  &__2depth-list {
+    padding: 3.6rem 0 0 0;
+
+    @include medium-device{
+      display: none;
+      padding: 3.6rem 0 0 3.4rem;
+
+      &.active {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__2depth-item {
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+
+    @include medium-device {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    a {
+      position: relative;
+      color: #999;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        bottom: -1px;
+        width: calc(100% + 10px);
+        height: 8px;
+        background-color: rgba(0,0,0,0);
+        transition: .4s;
+      }
+      
+      &:hover:after {
+        background-color: rgba(0,0,0,.1);
+      }
+    }
+  }
+}
+
+/******************** section intro ********************/
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85.4rem;
+  padding: 0 5rem;
+  background: url(../images/bg_top.png) no-repeat bottom / 2220px;
+
+  &__slide-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 140rem;
+    width: 100%;
+    padding: 5rem 0;
+    overflow: hidden;
+  }
+
+  &__slide-list {
+    display: flex;
+  }
+
+  &__slide-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex: 0 0 100%;
+    // padding: 0 13.5rem;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 0 13.5rem;
+
+    @include large-device {
+      padding: 0;
+    }
+
+    @include medium-device {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__description-wrap { 
+    flex: 1;
+    padding-left: 7rem;
+
+    @include small-device {
+      padding-left: 0;
+    }
+    
+    h3 {
+      margin-bottom: 2.2rem;
+      line-height: 1.45em;
+      font-size: 4rem;
+      white-space: nowrap;
+
+      @include medium-device {
+        font-size: 2.6rem;
+      }
+    }
+
+    strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #909191;
+
+      @include medium-device {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__link-direct { 
+    @include link-direct;
+    @include small-device {
+      height: 3.4rem;
+      line-height: 3.4rem;
+      padding: 0 3.2rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__image-wrap { 
+    flex: 1;
+
+    @include medium-device {
+      flex: 1 1 100%;
+      text-align: right;
+    }
+
+    img {
+      width: 100%;
+
+      @include medium-device {
+        width: 50%;
+      }
+
+      @include small-device {
+        width: 100%;
+      }
+    }
+  }
+
+  &__controll-wrap {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 20.6rem;
+    bottom: 0;
+    white-space: nowrap;
+
+    @include large-device {
+      left: 7rem;
+    }
+    @include medium-device {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__index {
+    letter-spacing: -0.05em;
+  }
+
+  &__status-bar {
+    display: inline-block; /* ie에서 inline-block 필요함 */
+    width: 15rem;
+    height: 3px;
+    background-color: #ccd1d6;
+    margin: 0 1rem 0 2.5rem;
+  }
+
+  &__progress {
+    display: block;
+    height: inherit;
+    background-color: #65686a;
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__btn-prev {
+    left: 0;
+  }
+
+  &__btn-next {
+    right: 0;
+  }
+}
+
+/******************** section favorite ********************/
+.favorite {
+  padding: 0 2.5rem;
+
+  @include inner;
+
+  &__list-wrap {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    padding: 3rem;
+    touch-action: none; /* 이게 없으면 모바일 기기에서 터치가 온전하게 작동이 안됨. ie10에서 접두어 붙여서 사용 가능 */
+
+    &:after {
+      content: '';      
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: red;
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    flex: 1 auto;
+    // height: 39rem;
+    padding: 3rem 2rem 4rem 4.5rem;
+    margin-right: 3rem;
+    box-shadow: 6px 10px 40px rgba(0,0,0,.1);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 2.4rem;
+    }
+
+    p {
+      line-height: 1.6875em;
+      margin: 2.2rem 0 2.7rem;
+      color: #666;
+      font-size: 1.6rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    margin-left: auto;
+  }
+}
+
+/******************** section recommend ********************/
+.recommend {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+
+  &__main-card-wrap {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: calc(50% - 12.8rem);
+    height: 60rem;
+    padding: 5rem 6.7rem 2rem 2rem;
+    background-color: #eee;
+
+    @include large-device {
+      justify-content: center;
+      width: calc(100% - 12.8rem);
+      padding: 5rem 0 2rem 2rem;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -12.8rem;
+      top: 0;
+      border-top: 60rem solid #f9f9f9;
+      border-left: 12.8rem solid #eee;
+    }
+  }
+
+  &__main-card-content-wrap {
+    width: 28rem;
+
+    h2 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+
+    img {
+      margin: 1.6rem 0 2.6rem;
+    }
+  }
+
+  &__main-card-description {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+
+    dt {
+      flex-basis: 50%;
+      margin-bottom: 1.5rem;
+      color: #888;
+    }
+
+    dd {
+      flex-basis: 50%;
+    }
+  }
+
+  &__link-direct {
+    @include link-direct;
+
+    padding: 0 6.3rem;
+    margin-top: 3.5rem;
+    
+    @include small-device {
+      padding: 0 5.3rem;
+    }
+  }
+
+  &__sub-card-wrap {
+    width: 51rem;
+    padding: 13.2rem 0 0 0;
+    margin-left: 13.8rem;
+    overflow: hidden;
+
+    @include large-device {
+      margin: auto;
+    }
+
+    @include small-device {
+      padding: 13.2rem 2rem 0;
+    }
+  }
+
+  &__slide-list {
+    display: flex;
+  }
+
+  &__slide-item {
+    flex-shrink: 0; /* ie에선 이겐 필요함. 원인은 알 수 없음 */
+    flex-basis: calc(33.333% - 2.9rem); /* flex-basis가 아닌 with를 쓰면 플렉스 컨테이너에 원인을 알 수 없는 이상한 border가 생김. 하지만 ie에선 여전히 border가 생김 */
+    margin-right: 3rem; 
+  }
+
+  &__slide-content-wrap {
+    display: block;
+    text-align: center;
+
+    h3 {
+      line-height: 1.375em;
+      margin-top: 7rem;
+      height: 9rem;
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 2.8rem;
+      border: 1px solid #00b4c8;
+      line-height: 2.3rem;
+      font-size: 1.4rem;
+      color: #00b4c8;
+    }
+  }
+
+  &__controll-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6.3rem;
+  }
+
+  &__index {
+    margin: 0 2.7rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    white-space: nowrap;
+  }
+
+  &__status-bar {
+    display: inline-block; /* ie에서 필요함 */
+    width: 15rem;
+    height: 3px;
+    background-color: #e0e0e0;
+  }
+
+  &__progress {
+    display: block;
+    height: inherit;
+    background-color: #707070;
+  }
+
+  &__auto-play {
+    margin: 0 2.2rem;
+  }
+}
+
+/******************** section service ********************/
+.service {
+  margin-top: 14rem;
+
+  &__refuel-wrap,
+  &__charge-wrap {
+    display: block;
+  }
+
+  &__refuel-inner,
+  &__charge-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 118rem;
+    width: 100%;
+    padding: 0 5rem;
+    margin: auto; 
+    background: url(../images/ico_big-arrow.svg) no-repeat right;
+
+    @include medium-device {
+      background: none;
+    }
+
+    h2 {
+      position: absolute;
+      left: 43rem;
+      top: 5.6rem;
+      font-size: 3.8rem;
+      font-weight: 300;
+
+      @include medium-device {
+        font-size: 2.6rem;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 2.8rem;
+        font-size: 1.8rem;
+        color: #888;
+
+        @include medium-device {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &__refuel-inner {
+    margin-bottom: 12rem;
+    overflow: hidden;
+
+    @include medium-device {
+      position: relative;
+      justify-content: flex-end;
+      padding: 6rem 5rem 6rem;
+      margin-bottom: 0;
+      background-color: #eee;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-right: 36.5rem solid #eee;
+        border-bottom: 7.5rem solid #f9f9f9;
+
+        @include small-device {
+          border-bottom: 4.5rem solid #f9f9f9;
+        }
+      }
+
+      h2 {
+        left: 5rem;
+        top: 6rem;
+
+        span {
+          margin-bottom: 1rem;
+        }
+      }
+
+      figure {
+        width: 40%;
+        margin-top: 12rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__charge-inner {
+    @include medium-device{
+      display: block;
+
+      figure {
+        width: 40%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        position: static;
+        margin-top: 5rem;
+
+        span {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/******************** section service ********************/
+.shopping {
+  padding: 0 2.5rem 3rem;
+  margin-top: 14rem;
+  background: url(../images/bg_shopping.svg) no-repeat bottom;
+
+  &__list-wrap {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    
+    @include inner;
+  }
+
+  &__list {
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    touch-action: none; /* 이게 없으면 모바일 기기에서 터치가 온전하게 작동이 안됨. ie10에서 접두어 붙여서 사용 가능 */
+    
+    &:after {
+      content: '';      
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: red;
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex: 1 0 auto;
+    width: 24.7rem;
+    height: 39.1rem;
+    padding: 6.7rem 3.2rem;
+    margin-right: 3rem;
+    background-color: #fff;
+    box-shadow: 6px 10px 40px rgba(0,0,0,.1);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  } 
+
+  &__link-direct {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+
+    h3 {
+      margin: 5.3rem 0 3.3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__price-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__old-price {
+    color: #888;
+  }
+
+  &__new-price {
+    display: block; /* ie에서는 display block이 있어야 justify-content spacebetween이 온전하게 표현됨 */
+    span {
+      color: #e34747;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    left: 0;
+    top: 1.6rem;
+    padding: 0 .9rem 0 1.4rem;
+    line-height: 1.7em;
+    font-size: 1.3rem;
+    color: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -.6rem;
+      border-left: .6rem solid #fff;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -1rem;
+      top: 0;
+      border-top: 2.2rem solid #fff;
+    }
+
+    &--color-red {
+      background-color: #e34747;
+
+      &:before {
+        border-bottom: .6rem solid #a93f3f;
+      }
+  
+      &:after {
+        border-left: 1rem solid #e34747;
+      }
+    }
+
+    &--color-skyblue {
+      background-color: #21abc7;
+      
+      &:before {
+        border-bottom: .6rem solid #21abc7;
+      }
+  
+      &:after {
+        border-left: 1rem solid #21abc7;
+      }
+    }
+
+    &--color-brown {
+      background-color: #c2af56;
+
+      &:before {
+        border-bottom: .6rem solid #c2af56;
+      }
+  
+      &:after {
+        border-left: 1rem solid #c2af56;
+      }
+    }
+  }
+
+  &__where-to-use {
+    display: block;
+    border: 1px solid #00b4c8;
+    line-height: 1.75em;
+    font-size: 1.3rem;
+    color: #00b4c8;
+    text-align: center;
+  }
+}
+
+/******************** section notice ********************/
+.notice {
+  background-color: #fff;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    padding: 0 2.5rem;
+
+    @include inner;
+
+    @include medium-device {
+      flex-direction: column;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: #f3f6f9;
+
+      @include medium-device {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2px;
+      }
+    }
+  }
+
+  &__inform,
+  &__win {
+    position: relative;
+    width: 50%;
+
+    @include medium-device {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+
+      @include medium-device {
+        font-size: 1.6rem;
+      }
+    }
+
+    h3 {
+      margin: 2.6rem 0 1.6rem;
+      color: #666;
+
+      @include medium-device {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__inform {
+    margin: 5.7rem 4rem 5.3rem 0;
+
+    @include medium-device {
+      margin: 4.5rem 4rem 2.8rem 0;
+    }
+  }
+
+  &__win {
+    margin: 5.7rem 0 5.3rem 4rem;
+
+    @include medium-device {
+      margin: 4.5rem 0 2.8rem 0;
+    }
+  }
+
+  &__slide-list-wrap {
+    height: 7.8rem;
+    overflow: hidden;
+  }
+
+  &__slide-list {
+    transform: translateY(-7.8rem);
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    color: #888;
+  }
+
+  &__link-direct {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/ico_more.svg) no-repeat center;
+
+    @include small-device {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+/******************** section notice ********************/
+.footer {
+  padding: 9.4rem 2.5rem 3rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+
+  @include inner;
+  @include medium-device {
+    padding: 9.4rem 0 3rem;
+    font-size: 1.2rem;
+  }
+
+  @include small-device {
+    padding: 2rem 0 3rem;
+    background-color: #fff;
+  }
+
+  &__top-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__policy-wrap {
+    @include medium-device {
+      width: 100%; /* ie에서 필요함 */
+    }
+  }
+
+  &__policy-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+
+    @include medium-device {
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__policy-item {
+    margin: 0 2.4rem 0 0;
+
+    @include medium-device {
+      margin: 0 1.2rem 1rem;
+    }
+
+    &:last-child {
+      position: relative;
+      margin: 0 0 1rem;
+    }
+
+    a {
+      color: #666;
+    }
+
+    &--privacy {
+      font-weight: 700;
+    }
+  }
+
+  &__btn-family-site {
+    line-height: 1;
+    font-size: inherit;
+    color: #00b4c8;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: url(../images/btn-family-site.svg) no-repeat center / 50% #00b4c8;
+      margin-left: 3px;
+      vertical-align: -3px;
+
+      @include small-device {
+        width: 12px;
+        height: 12px;
+        vertical-align: -1.5px;
+      }
+    }
+
+    &.active:after {
+      background: url(../images/btn-family-site-minus.svg) no-repeat center / 50% #00b4c8;
+    }
+  }
+
+  &__family-site-list { 
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 130%;
+    border: 1px solid #b0dee5;
+    padding: 2rem 0;
+    background-color: #fff;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__family-site-item {
+    font-size: 1.4rem;
+    padding-left: 1.4rem;
+    margin-bottom: 1.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a:hover {
+      color: #00b4c8;
+      text-decoration: underline;
+    }
+  }
+
+  &__customer-service-wrap {
+    color: #666;
+
+    @include medium-device {
+      text-align: center;
+    }
+  }
+
+  &__customer-service-number {
+    color: #333;
+  }
+
+  &__customer-service-time {
+    color: #999;
+  }
+
+  &__certification-wrap {
+    display: flex;
+    align-items: center;
+    height: 3.9rem;
+
+    @include medium-device {
+      justify-content: center;
+      width: 100%;
+      margin-top: 2.7rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__image-ncsi-wrap {
+    width: 4.7rem;
+  }
+
+  &__image-pims-wrap {
+    width: 3.9rem;
+    margin-left: 1rem;
+  }
+
+  &__bottom-wrap {
+    margin-top: 2.3rem;
+    text-align: center;
+
+    @include medium-device {
+      padding-top: 2rem;
+      border-top: 2px solid #ebebeb;
+    }
+
+    img {
+      width: 9.1rem;
+      height: 2.7rem;
+    }
+  }
+
+  &__copyright {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #999;
+
+    strong {
+      color: #00b4c8;
+    }
+  }
+}
+
+/***** ie cross browsing *****/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .favorite__list-wrap,
+  .shopping__list-wrap {
+    user-select: none;
+  }
+}
+
+
+
+

@@ -1,0 +1,51 @@
+/* TYPOGRAPHY */
+body {
+    font-family: 'Noto Sans KR', sans-serif; 
+    color: #333;
+}
+input,
+button {
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+.main_tt {
+    line-height: 54px;
+    margin-bottom: 27px;
+    font-size: 36px;
+    color: #b5985a;
+    font-weight: 500;
+}
+.sub_tt {
+    line-height: 1.472em;
+    margin-bottom: 80px;
+    font-size: 55px;
+    font-weight: 300;
+}
+.main_tt,
+.sub_tt {
+    text-align: center;
+}
+.sub_tt em {
+    font-weight: 400;
+}
+.cont_tt {
+    font-size: 24px;
+    color: #b5985a;
+    font-weight: 500;
+}
+/* LAYOUT */
+.container {
+    max-width: 1540px;
+    width: 100%;
+    padding: 0 20px;
+    margin: auto;
+    box-sizing: border-box;
+}
+section {
+    position: relative;
+    overflow: hidden;
+}
+section:not(:first-child){
+    padding: 160px 0;
+    background: no-repeat center / cover;
+    box-sizing: border-box;
+}

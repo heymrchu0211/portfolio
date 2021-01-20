@@ -1,0 +1,127 @@
+@media (max-width:1280px){
+    header .nav > ul > li > a {
+        padding: 0 30px 18px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    header .logo img {
+        height: 40px;
+    }
+    .number .contents_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .number .contents_wrap li {
+        flex: none;
+        width: 33.333%;
+        padding: 0 30px 30px 0;
+        box-sizing: border-box;
+    }
+    .business .contents_wrap li {
+        width: 50%;
+    }
+    .recruit .contents_wrap ul li {
+        width: 50%;
+    }
+}
+@media (max-width:992px){
+    .main_tt {
+        font-size: 26px;
+    }
+    .sub_tt {
+        font-size: 38px;
+    }
+    header .nav {
+        display: none;
+    }
+    header .btn_family {
+        margin: 0 30px 0 auto;
+    }
+    header .all_menu_wrap nav > ul {
+        display: block;
+    }
+}
+@media (max-width:768px){
+    .main_tt {
+        font-size: 22px;
+    }
+    .sub_tt {
+        font-size: 28px;
+    }
+    section:not(:first-child) {
+        padding: 40px 0;
+    }
+    .number .contents_wrap {
+        margin: 0 0 -30px 0;
+    }
+    .number .contents_wrap li {
+        width: 100%;
+        padding: 0 0px 30px 0;
+    }
+    .number .contents_wrap li:last-child {
+        padding-right: 0;
+    }
+    .business .contents_wrap li {
+        width: 100%;
+    }
+    .recruit .contents_wrap {
+        padding: 0;
+    }
+    .recruit .contents_wrap ul li {
+        width: 100%;
+    }
+    section.sub {
+        padding: 0;
+    }
+}
+@media (max-width:480px){
+    .main_tt {
+        font-size: 16px;
+    }
+    .sub_tt {
+        margin-bottom: 40px;
+        font-size: 19px;
+    }
+    header .logo img {
+        height: 28px;
+    }
+    header .btn_family {
+        margin: 0 15px 0 auto;
+        height: 30px;
+        padding: 0 15px 0 28px;
+        background: url(../images/icon_family.png) no-repeat 13px 9px / 12px 12px rgba(167,169,172,0.25);
+        font-size: 12px;
+    }
+    .intro {
+        height: 100vh;
+    }
+    .value .btn_more {
+        width: 230px;
+        height: 54px;
+        line-height: 54px;
+    }
+    .recruit .contents_wrap ul li .item_box p {
+        font-size: 16px;
+    }
+    footer .top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    footer .top .company_info {
+        font-size: 13px;
+    }
+    footer .top .sns {
+        margin-top: 20px;
+    }
+    footer .top .sns a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    footer .bottom {
+        flex-direction: column;
+        font-size: 14px;
+    }
+    footer .bottom .policy {
+        margin-top: 20px;
+    }
+}

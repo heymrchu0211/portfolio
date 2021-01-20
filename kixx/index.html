@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!-- 해당 웹페이지가 HTML5 표준을 따른다는 뜻-->
+<html lang="ko">
+<!-- 화면 낭독기 (스크린 리더 등의 보조기기)가 해당 언어를 인식하고 자동으로 음성을 변환하고 해당 언어에 적합한 발음을 제공할 수 있도록 lang속성값을 명시해줘야 함(한국형 웹 컨텐츠 접근성 지침) -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 웹페이지의 텍스트를 출력할때 사용할 인코딩 방식을 정의 , UTF-8은 모든 언어의 문자를 지원하는 인코딩 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 뷰포트(화면에 보여지는 영역)를 디바이스의 너비에 따라 설정하고 초기배율은 1.0배라는 뜻 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 구형 IE의 대응을 위한것으로 해당 웹페이지를 최신 표준모드로 해석하라는 뜻 -->
+  <meta name="robots" content="index, follow">
+  <!-- index는 검색로봇이 해당 웹페이지를 수집 대상으로 한다는 뜻, follow는 해당 웹페이지와 함께 링크가 걸린 곳을 수집한다는 뜻 -->
+  <title>Kixx</title>
+  <!-- 브라우저의 제목 표시줄에 출력되는 웹페이지의 제목-->
+
+  <!-- description -->
+  <meta name="author" content="김춘영">
+  <!-- 웹페이지의 저자 -->
+  <meta name="description" content="Kixx">
+  <!-- 검색 결과에 표시되는 단어 -->
+  <meta name="keywords" content="Kixx">
+  <!-- 검색 엔진에 의해 검색되는 단어 -->
+
+  <!-- google fonts cdn -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="icon" href="images/favicon/favicon.ico">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- facebook open graph meta tags 페이스북이나 카카오톡에서 링크를 공유 받을때 해당 웹페이지의 이미지와 제목 등을 미리보기 할 수 있도록 함 -->
+  <meta property="og:title" content="포트폴리오 - 웹퍼블리셔 김춘영">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="신입 웹퍼블리셔 지원자 김춘영의 포트폴리오 페이지입니다.">
+
+  <link rel="stylesheet" href="css/reest.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <a href="#main" class="skip-navigation">본문 바로가기</a>
+  <!-- // 본문바로가기(화면낭독기 사용자들을 위한 웹접근성을 준수  하기 위해서 있어야 함) -->
+  <header class="header">
+    <h1 class="header__logo">
+      <a href="">
+        <img src="images/logo.svg" alt="kixx 로고">
+      </a>
+    </h1>
+    <!-- //header__logo -->
+    <a class="header__link-login" href="">
+      <img src="images/ico_login.svg" alt="로그인 이미지">
+    </a>
+    <!-- //header__link-login -->
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="">주유하다</a></li>
+        <li class="header__nav-item"><a href="">더하다</a></li>
+        <li class="header__nav-item"><span class="blind">비어있는 공간</span></li>
+        <li class="header__nav-item"><a href="">즐기다</a></li>
+        <li class="header__nav-item"><a href="">함께하다</a></li>
+      </ul>
+    </nav>
+    <!-- //header__nav -->
+    <button class="header__btn-hamburger" type="button">
+      <img src="images/btn_hamburger.svg" alt="전체메뉴 버튼 이미지">
+    </button>
+    <!-- //header__btn-hamburger -->
+    <div class="all-menu-wrap">
+      <div class="all-menu">
+        <div class="all-menu__top">
+          <a class="all-menu__logo" href="">
+            <img src="images/logo_allmenu.svg" alt="kixx 로고">
+          </a>
+          <div class="all-menu__link-login">
+            <a href="">로그인</a>을 해주세요
+          </div>
+          <button class="all-menu__btn-close" type="button">
+            <img src="images/btn_close.svg" alt="전체메뉴 닫기 버튼">
+          </button>
+        </div>
+        <nav class="all-menu__nav">
+          <ul class="all-menu__1depth-list">
+            <li class="all-menu__1depth-item">
+              <a class="all-menu__1depth-text all-menu__1depth-text--mykick" href="">나의 킥스</a>
+              <ul class="all-menu__2depth-list">
+                <li class="all-menu__2depth-item"><a href="">마이페이지</a></li>
+                <li class="all-menu__2depth-item"><a href="">주유 내역</a></li>
+                <li class="all-menu__2depth-item"><a href="">쿠폰 내역</a></li>
+                <li class="all-menu__2depth-item"><a href="">포인트 내역</a></li>
+                <li class="all-menu__2depth-item"><a href="">카드 내역</a></li>
+                <li class="all-menu__2depth-item"><a href="">상담 내역</a></li>
+                <li class="all-menu__2depth-item"><a href="">개인정보</a></li>
+              </ul>
+            </li>
+            <li class="all-menu__1depth-item">
+              <a class="all-menu__1depth-text all-menu__1depth-text--refuel" href="">주유하다</a>
+              <ul class="all-menu__2depth-list">
+                <li class="all-menu__2depth-item"><a href="">킥스를 만나다</a></li>
+                <li class="all-menu__2depth-item"><a href="">주유소/충전소 찾기</a></li>
+                <li class="all-menu__2depth-item"><a href="">주유고객 차량정비 혜택안내</a></li>
+                <li class="all-menu__2depth-item"><a href="">EV충전소</a></li>
+              </ul>
+            </li>
+            <li class="all-menu__1depth-item">
+              <a class="all-menu__1depth-text all-menu__1depth-text--add" href="">더하다</a>
+              <ul class="all-menu__2depth-list">
+                <li class="all-menu__2depth-item"><a href="">주유할인카드</a></li>
+                <li class="all-menu__2depth-item"><a href="">Smart 주유</a></li>
+              </ul>
+            </li>
+            <li class="all-menu__1depth-item">
+              <a class="all-menu__1depth-text all-menu__1depth-text--enjoy" href="">즐기다</a>
+              <ul class="all-menu__2depth-list">
+                <li class="all-menu__2depth-item"><a href="">출석체크 이벤트</a></li>
+                <li class="all-menu__2depth-item"><a href="">이벤트</a></li>
+                <li class="all-menu__2depth-item"><a href="">당첨자 발표</a></li>
+                <li class="all-menu__2depth-item"><a href="">포인트 환전소</a></li>
+                <li class="all-menu__2depth-item"><a href="">포인트몰</a></li>
+                <li class="all-menu__2depth-item"><a href="">GS&amp;쿠폰</a></li>
+              </ul>
+            </li>
+            <li class="all-menu__1depth-item">
+              <a class="all-menu__1depth-text all-menu__1depth-text--together" href="">함께하다</a>
+              <ul class="all-menu__2depth-list">
+                <li class="all-menu__2depth-item"><a href="">더 나음을 행동하다</a></li>
+                <li class="all-menu__2depth-item"><a href="">나눔을 함께하다</a></li>
+                <li class="all-menu__2depth-item"><a href="">GS&amp;POINT를 만나다</a></li>
+                <li class="all-menu__2depth-item"><a href="">아임유어에너지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- //all-menu__nav -->
+      </div>
+      <!-- //all-menu -->
+    </div>
+    <!-- //all-menu-wrap -->
+  </header>
+  <!-- //header -->
+  <main id="main" role="main">
+    <section class="intro">
+      <h2 class="blind">인트로 영역</h2>
+      <div class="intro__slide-wrap">
+        <ul class="intro__slide-list">
+          <li class="intro__slide-item">
+            <div class="intro__description-wrap">
+              <h3>
+                에너지플러스카드<br>
+                총 4만원<br>
+                쿠폰혜택 증정
+              </h3>
+              <strong>5만원 이상 결제시</strong>
+              <a class="intro__link-direct" href="">바로가기</a>
+            </div>
+            <figure class="intro__image-wrap">
+              <img src="images/img_intro1.png" alt="슬라이드 이미지">
+            </figure>
+          </li>
+          <li class="intro__slide-item">
+            <div class="intro__description-wrap">
+              <h3>
+                wavve 이용권<br>
+                제공 이벤트
+              </h3>
+              <strong>이벤트 응모하고 wavve 한달 이용권 받기</strong>
+              <a class="intro__link-direct" href="">바로가기</a>
+            </div>
+            <figure class="intro__image-wrap">
+              <img src="images/img_intro2.png" alt="슬라이드 이미지">
+            </figure>
+          </li>
+          <li class="intro__slide-item">
+            <div class="intro__description-wrap">
+              <h3>
+                카카오뱅크 체크카드<br>
+                결제 시 월 3,000원<br>
+                캐시백!
+              </h3>
+              <strong>5만원 이상건 결제 시</strong>
+              <a class="intro__link-direct" href="">바로가기</a>
+            </div>
+            <figure class="intro__image-wrap">
+              <img src="images/img_intro3.png" alt="슬라이드 이미지">
+            </figure>
+          </li>
+        </ul>
+        <!-- //intro__slide-list -->
+        <div class="intro__controll-wrap">
+          <span class="intro__index">
+            <span class="intro__current-index">1</span>
+            /
+            <span class="intro__total-index">3</span>
+          </span>
+          <span class="intro__status-bar">
+            <span class="intro__progress">
+              <span class="blind">상태진행 바</span>
+            </span>
+          </span>
+          <button class="intro__auto-play" type="button">
+            <img src="images/btn_play.svg" alt="재생버튼 이미지">
+          </button>
+        </div>
+        <!-- //intro__controll-wrap -->
+        <button class="intro__btn-prev" type="button">
+          <img src="images/btn_prev.svg" alt="클릭하면 이전 슬라이드로 이동하는 버튼">
+        </button>
+        <!-- //intro__btn-prev -->
+        <button class="intro__btn-next" type="button">
+          <img src="images/btn_next.svg" alt="클릭하면 다음 슬라이드로 이동하는 버튼">
+        </button>
+        <!-- //intro__btn-next -->
+      </div>
+      <!-- //intro__slide-wrap -->
+    </section>
+    <!-- //intro -->
+    <section class="favorite">
+      <div class="title-wrap">
+        <h2>
+          즐겨찾는<span>Kixx</span>
+        </h2>
+        <p>
+          고객님들께서 자주찾는 서비스를 바로 확인해보세요
+        </p>
+      </div>
+      <div class="favorite__list-wrap">
+        <ul class="favorite__list">
+          <li class="favorite__item">
+            <figure class="favorite__image-wrap">
+              <img src="images/img_attend.svg" alt="출석체크 이미지">
+            </figure>
+            <h3>출석체크</h3>
+            <p>
+              매일매일 출석체크를 참여하여<br>
+              포인트를 적립해보세요
+            </p>
+            <a href=""><img src="images/ico_arrow.png" alt="화살표 이미지"></a>
+          </li>
+          <li class="favorite__item">
+            <figure class="favorite__image-wrap">
+              <img src="images/img_event.svg" alt="이벤트 이미지">
+            </figure>
+            <h3>이벤트</h3>
+            <p>
+              GS칼텍스와 함께하는<br>
+              다양한 이벤트에 참여해보세요
+            </p>
+            <a href=""><img src="images/ico_arrow.png" alt="화살표 이미지"></a>
+          </li>
+          <li class="favorite__item">
+            <figure class="favorite__image-wrap">
+              <img src="images/img_gas.svg" alt="주유소 찾기 이미지">
+            </figure>
+            <h3>주유소 찾기</h3>
+            <p>
+              합리적인 소비를 할 수 있는<br>
+              스마트 주유소를 검색해보세요
+            </p>
+            <a href=""><img src="images/ico_arrow.png" alt="화살표 이미지"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //favorite -->
+    <section class="recommend">
+      <div class="recommend__main-card-wrap">
+        <div class="recommend__main-card-content-wrap">
+          <h2>energy plus 카드</h2>
+          <img src="images/img_card_energy.png" alt="에너지 플러스 카드 이미지">
+          <dl class="recommend__main-card-description">
+            <dt>GS칼텍스 주유 시</dt>
+            <dd>리터당 최대 150P 적립</dd>
+            <dt>생활편의영역 결제 시</dt>
+            <dd>최대 2% 적립</dd>
+            <dt>GS&amp;POINT</dt>
+            <dd>월 최대 3만P 적립</dd>
+          </dl>
+          <a class="recommend__link-direct" href="">자세히 보기</a>
+        </div>
+      </div>
+      <!-- //recommend__main-card -->
+      <div class="recommend__sub-card-wrap">
+        <ul class="recommend__slide-list">
+          <li class="recommend__slide-item">
+            <a class="recommend__slide-content-wrap" href="">
+              <img src="images/img_card_1.png" alt="추천카드1 이미지">
+              <h3>NH 채움 플래티늄 스카이패스</h3>
+              <span>자세히 보기</span>
+            </a>
+          </li>
+          <li class="recommend__slide-item">
+            <a class="recommend__slide-content-wrap" href="">
+              <img src="images/img_card_2.png" alt="추천카드1 이미지">
+              <h3>신한 S.Sing 모두사랑복지카드</h3>
+              <span>자세히 보기</span>
+            </a>
+          </li>
+          <li class="recommend__slide-item">
+            <a class="recommend__slide-content-wrap" href="">
+              <img src="images/img_card_3.png" alt="추천카드1 이미지">
+              <h3>현대카드M 화물차유가보조금카드</h3>
+              <span>자세히 보기</span>
+            </a>
+          </li>
+          <li class="recommend__slide-item">
+            <a class="recommend__slide-content-wrap" href="">
+              <img src="images/img_card_4.png" alt="추천카드1 이미지">
+              <h3>KB국민 스타트럭카드</h3>
+              <span>자세히 보기</span>
+            </a>
+          </li>
+          <li class="recommend__slide-item">
+            <a class="recommend__slide-content-wrap" href="">
+              <img src="images/img_card_5.png" alt="추천카드1 이미지">
+              <h3>삼성카드 3v3(GS칼텍스)</h3>
+              <span>자세히 보기</span>
+            </a>
+          </li>
+        </ul>
+        <!-- //recommend__slide-list -->
+        <div class="recommend__controll-wrap">
+          <button class="recommend__btn-prev">
+            <img src="images/btn_small-prev.svg" alt="클릭하면 이전 슬라이드로 이동하는 버튼">
+          </button>
+          <span class="recommend__index">
+            <span class="recommend__current-index">1</span>
+            /
+            <span class="recommend__total-index">3</span>
+          </span>
+          <span class="recommend__status-bar">
+            <span class="recommend__progress">
+              <span class="blind">상태진행 바</span>
+            </span>
+          </span>
+          <button class="recommend__auto-play" type="button">
+            <img src="images/btn_play.svg" alt="재생버튼 이미지">
+          </button>
+          <button class="recommend__btn-next">
+            <img src="images/btn_small-next.svg" alt="클릭하면 다음 슬라이드로 이동하는 버튼">
+          </button>
+        </div>
+        <!-- //recommend__controll-wrap -->
+      </div>
+      <!-- //recommend__sub-card -->
+    </section>
+    <!-- //recommend -->
+    <section class="service">
+      <a class="service__refuel-wrap" href="">
+        <div class="service__refuel-inner">
+          <figure>
+            <img src="images/img_refuel.png" alt="주유 서비스 이미지">
+          </figure>
+          <h2>
+            <span>1,000원씩 할인받는 Smart주유 서비스!</span>
+            I'm your SMART energy
+          </h2>
+        </div>
+      </a>
+      <!-- //service__refuel-wrap -->
+      <a class="service__charge-wrap" href="">
+        <div class="service__charge-inner">
+          <figure>
+            <img src="images/img_charge.png" alt="충전 서비스 이미지">
+          </figure>
+          <h2>
+            <span>빠르고, 편리한 EV 충전 서비스</span>
+            I'm your ELECTRIC energy
+          </h2>
+        </div>
+      </a>
+      <!-- //service__charge-wrap -->
+    </section>
+    <!-- //service -->
+    <section class="shopping">
+      <div class="title-wrap">
+        <h2>
+          추천<span>상품</span>
+        </h2>
+        <p>
+          쇼핑하고 GS&amp;POINT로 간편하게 결제하세요
+        </p>
+      </div>
+      <div class="shopping__list-wrap">
+        <ul class="shopping__list">
+          <li class="shopping__item">
+            <a class="shopping__link-direct" href="">
+              <figure class="image-wrap">
+                <img src="images/img_ramen.png" alt="라면 이미지">
+              </figure>
+              <h3>오뚜기컵라면 열라면 종이용기 115g*12ea</h3>
+              <div class="shopping__price-wrap">
+                <s class="shopping__old-price">14,000p</s>
+                <strong class="shopping__new-price"><span>13,200</span>p</strong>
+              </div>
+              <span class="shopping__badge shopping__badge--color-red">포인트몰</span>
+            </a>
+          </li>
+          <li class="shopping__item">
+            <a class="shopping__link-direct" href="">
+              <figure class="image-wrap">
+                <img src="images/img_handcream.png" alt="핸드크림 이미지">
+              </figure>
+              <h3>[GS칼텍스] energy plus 핸드워시 겔</h3>
+              <div class="shopping__price-wrap">
+                <s class="shopping__old-price">14,000p</s>
+                <strong class="shopping__new-price"><span>13,200</span>p</strong>
+              </div>
+              <span class="shopping__badge shopping__badge--color-red">포인트몰</span>
+            </a>
+          </li>
+          <li class="shopping__item">
+            <a class="shopping__link-direct" href="">
+              <figure class="image-wrap">
+                <img src="images/img_lotteria.png" alt="롯데리아 이미지">
+              </figure>
+              <h3>[롯데리아] 롯데리아 데리버거세트</h3>
+              <div class="shopping__price-wrap">
+                <s class="shopping__old-price">14,000p</s>
+                <strong class="shopping__new-price"><span>13,200</span>p</strong>
+              </div>
+              <span class="shopping__badge shopping__badge--color-skyblue">포인트몰</span>
+            </a>
+          </li>
+          <li class="shopping__item">
+            <a class="shopping__link-direct" href="">
+              <figure class="image-wrap">
+                <img src="images/img_cash.png" alt="상품권 이미지">
+              </figure>
+              <h3>GS칼텍스 상품권</h3>
+              <span class="shopping__where-to-use">상품권 사용처</span>
+              <span class="shopping__badge shopping__badge--color-brown">포인트몰</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //shopping -->
+    <section class="notice">
+      <div class="notice__inner">
+        <div class="notice__inform">
+          <h2>공지사항</h2>
+          <div class="notice__slide-list-wrap">
+            <ul class="notice__slide-list">
+              <li class="notice__slide-item">
+                <h3>시스템 점검 안내 (01.07 00:00 ~ 07:00)</h3>
+                <span class="notice__date">2021.01.01</span>
+              </li>
+              <li class="notice__slide-item">
+                <h3>시스템 점검에 따른 이벤트 응모 일시 중단 안내</h3>
+                <span class="notice__date">2021.01.02</span>
+              </li>
+              <li class="notice__slide-item">
+                <h3>시스템 점검 안내 (01.07 00:00 ~ 07:00)</h3>
+                <span class="notice__date">2021.01.03</span>
+              </li>
+            </ul>
+          </div>
+          <a class="notice__link-direct" href=""></a>
+        </div>
+        <!-- //notice__inform -->
+        <div class="notice__win">
+          <h2>당첨자 발표</h2>
+          <div class="notice__slide-list-wrap">
+            <ul class="notice__slide-list">
+              <li class="notice__slide-item">
+                <h3>메가박스 영화예매권 제공 이벤트</h3>
+                <span class="notice__date">2021.01.01</span>
+              </li>
+              <li class="notice__slide-item">
+                <h3>wavve 이용권 제공 이벤트</h3>
+                <span class="notice__date">2021.01.01</span>
+              </li>
+              <li class="notice__slide-item">
+                <h3>12월 출석체크하고 포인트받자!</h3>
+                <span class="notice__date">2021.01.01</span>
+              </li>
+            </ul>
+          </div>
+          <a class="notice__link-direct" href=""></a>
+        </div>
+        <!-- //notice__win -->
+      </div>
+      <!-- //notice__inner -->
+    </section>
+  </main>
+  <!-- //main -->
+  <!-- //notice -->
+  <footer class="footer">
+    <div class="footer__top-wrap">
+      <div class="footer__policy-wrap">
+        <ul class="footer__policy-list">
+          <li class="footer__policy-item"><a href="">회사소개</a></li>
+          <li class="footer__policy-item"><a href="">gs&amp;pass란</a></li>
+          <li class="footer__policy-item"><a href="">서비스약관</a></li>
+          <li class="footer__policy-item"><a href="">이메일무단수집거부</a></li>
+          <li class="footer__policy-item footer__policy-item--privacy"><a href="">개인정보처리방침</a></li>
+          <li class="footer__policy-item"><a href="">사이트맵</a></li>
+          <li class="footer__policy-item"><a href="">자주찾는질문</a></li>
+          <li class="footer__policy-item">
+            <button class="footer__btn-family-site">family site</button>
+            <ul class="footer__family-site-list">
+              <li class="footer__family-site-item"><a href="">GS SHOP</a></li>
+              <li class="footer__family-site-item"><a href="">GS 엠비즈</a></li>
+              <li class="footer__family-site-item"><a href="">GS 25</a></li>
+              <li class="footer__family-site-item"><a href="">GS 칼텍스</a></li>
+              <li class="footer__family-site-item"><a href="">Kixx 루보</a></li>
+              <li class="footer__family-site-item"><a href="">GS &amp; POINT</a></li>
+              <li class="footer__family-site-item"><a href="">랄라블라</a></li>
+              <li class="footer__family-site-item"><a href="">GS 폴리머</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- //footer__policy-list -->
+        <div class="footer__customer-service-wrap">
+          <span>고객센터</span>
+          <span class="footer__customer-service-number">1544.5151(유료)</span>
+          <span class="footer__customer-service-time">평일 9시~6시 : 주말/공휴일제외</span>
+        </div>
+        <!-- //footer__customer-service-wrap -->
+      </div>
+      <div class="footer__certification-wrap">
+        <figure class="footer__image-ncsi-wrap">
+          <img src="images/ncsi.png" alt="ncsi로고 이미지">
+        </figure>
+        <figure class="footer__image-pims-wrap">
+          <img src="images/pims.png" alt="pims로고 이미지">
+        </figure>
+      </div>
+    </div>
+    <!-- //footer__top-wrap -->
+    <div class="footer__bottom-wrap">
+      <figure>
+        <img src="images/gs.png" alt="gs로고 이미지">
+      </figure>
+      <p class="footer__copyright">
+        copyright&copy; <strong>gs caltex</strong> corporation. all rights reserved.
+      </p>
+    </div>
+    <!-- //footer__bottom-wrap -->
+  </footer>
+  <!-- //footer -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

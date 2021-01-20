@@ -1,0 +1,52 @@
+/*
+이 페이지를 만들면서 초기화를 할 필요가 있다고 생각되는 것들에 대해서만 초기화 했습니다.
+*/
+html,body,ul,h1,h2,h3,h4,h5,h6,figure,p,dl,dd {
+  margin: 0;
+  padding: 0;
+  /* font-size: 100%; */
+  font: inherit;
+}
+em {
+  font-style: normal;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+strong {
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0;
+  cursor: pointer;
+}
+img {
+  border: none;
+}
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.skip-navigation { /* 본문 바로가기 */
+  position: absolute; left: 0; top: -100%; z-index: 2; width: 100%; height: 50px; line-height: 50px; background-color: #333; font-size: 16px; color: #fff; text-align: center; transition: .5s;
+}
+
+.skip-navigation:focus {
+  top: 0;
+}

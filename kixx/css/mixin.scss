@@ -1,0 +1,37 @@
+@import 'variable';
+
+@mixin inner {
+  max-width: 113rem;
+  width: 100%;
+  margin: auto;
+}
+
+@mixin link-direct {
+  display: inline-block;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  padding: 0 7.2rem;
+  margin: 4.5rem 0 0;
+  background-color: #01b4d0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/************************ breakpoints ***********************/
+@mixin large-device {
+  @media (max-width: $breakpoints-large) {
+    @content;
+  }
+}
+
+@mixin medium-device {
+  @media (max-width: $breakpoints-medium) {
+    @content;
+  }
+}
+
+@mixin small-device {
+  @media (max-width: $breakpoints-small) {
+    @content;
+  }
+}

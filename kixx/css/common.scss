@@ -1,0 +1,35 @@
+@import 'variable', 'mixin';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  background-color: #f9f9f9;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: normal;
+  word-break: keep-all;
+  letter-spacing: 0.02em;
+}
+
+.title-wrap {
+  text-align: center;
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  p {
+    margin: 1.9rem 0 3.2rem;
+    font-size: 1.6rem;
+    color: #888;
+  }
+}
