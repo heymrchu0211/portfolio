@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="all">
+  <meta name="description" content="김춘영 1차 포트폴리오">
+  <meta name="keywords" content="포트폴리오,김춘영,웹퍼블리셔,웹퍼블리싱,html,css,javascript,jquery">
+  <title>의정부시 도서관</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="header_top container clearfix">
+      <h1><a href="#"><img src="images/logo.gif" alt="책읽는도시 의정부 로고"></a></h1>
+      <ul>
+        <li><a href="#" class="highlight">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">내서재</a></li>
+        <li><a href="#">english<i class="fas fa-caret-right"></i></a></li>
+      </ul>
+    </div><!-- //header_top -->
+    <nav>
+      <ul>
+        <li><a href="#">도서관소개</a>
+          <ul>
+            <li><a href="#">도서관안내</a></li>
+            <li><a href="#">도서관현황</a></li>
+            <li><a href="#">도서관이용</a></li>
+            <li><a href="#">찾아오시는길</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">도서관서비스</a>
+          <ul>
+            <li><a href="#">참고정보</a></li>
+            <li><a href="#">맞춤정보</a></li>
+            <li><a href="#">상호대차</a></li>
+            <li><a href="#">대출/예약/연기</a></li>
+            <li><a href="#">희망도서신청</a></li>
+            <li><a href="#">도서관연계</a></li>
+            <li><a href="#">정보채널</a></li>
+            <li><a href="#">사이버학습</a></li>
+          </ul>
+        </li>
+        <li><a href="#">자료찾기</a>
+          <ul>
+            <li><a href="#">전체</a></li>
+            <li><a href="#">도서</a></li>
+            <li><a href="#">추천도서</a></li>
+            <li><a href="#">비도서</a></li>
+            <li><a href="#">추천 비도서</a></li>
+            <li><a href="#">신착도서</a></li>
+          </ul>
+        </li>
+        <li><a href="#">도서관이야기</a>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">도서관일정</a></li>
+            <li><a href="#">주말영화상영</a></li>
+            <li><a href="#">행사갤러리</a></li>
+            <li><a href="#">도서관소식지</a></li>
+            <li><a href="#">향토자료실</a></li>
+          </ul>
+        </li>
+        <li><a href="#">참여마당</a>
+          <ul>
+            <li><a href="#">자유게시판</a></li>
+            <li><a href="#">도서관에 바란다</a></li>
+            <li><a href="#">분실물 찾기</a></li>
+            <li><a href="#">독서회</a></li>
+            <li><a href="#">도서관 자원봉사</a></li>
+            <li><a href="#">설문조사</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav><!-- //nav -->
+  </header><!-- //header -->
+  <div class="main">
+    <section class="search">
+      <h2 class="hide">검색영역</h2>
+      <div class="container">
+        <form action="get">
+          <div class="search_field">
+            <input type="text" id="search" name="search" placeholder="검색어를 입력해주세요.">
+          </div>
+          <button type="submit"><i class="fas fa-search"></i><span class="hide">검색하기</span></button>
+          <button type="button" class="detail_search_btn">상세검색</button>
+          <div class="detail_search_wrap">
+            <div class="innerbox">
+              <p>서비스 준비중입니다.</p>
+              <span><i class="fas fa-times"></i></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section><!-- //search -->
+    <section class="service">
+      <h2 class="hide">서비스영역</h2>
+      <div class="container">
+        <ul class="tabs_nav top clearfix">
+          <li>
+            <h3><a class="cont_tt active" href="#tabs_1">자주 이용하는 서비스</a></h3>
+          </li>
+          <li>
+            <h3><a class="cont_tt" href="#tabs_2">관내사이트 바로가기</a></h3>
+          </li>
+        </ul>
+        <div id="tabs_1">
+          <ul class="clearfix">
+            <li><a href="#">도서관 이용</a></li>
+            <li><a href="#">찾아오시는길</a></li>
+            <li><a href="#">행사갤러리</a></li>
+            <li><a href="#">대출예약</a></li>
+            <li><a href="#">상호대차</a></li>
+            <li><a href="#">희망도서신청</a></li>
+          </ul>
+        </div>
+        <div id="tabs_2">
+          <ul class="tabs_nav clearfix">
+            <li><a href="#" class="click">일반이용자</a></li>
+            <li><a href="#">사서ㆍ연구자</a></li>
+            <li><a href="#">출판사</a></li>
+          </ul>
+          <ul class="contents clearfix">
+            <li><a href="#">국가전거</a></li>
+            <li><a href="#">국가전자도서관</a></li>
+            <li><a href="#">대한민국신문아카이브</a></li>
+            <li><a href="#">정보</a></li>
+            <li><a href="#">도서관 정보 나루</a></li>
+            <li><a href="#">북한자료센터</a></li>
+            <li><a href="#">웹자원검색(OASIS)</a></li>
+            <li><a href="#">인문열차, 삶을 달리다</a></li>
+            <li><a href="#">책바다(국가상호대차)</a></li>
+            <li><a href="#">책이음</a></li>
+            <li><a href="#">한국고전적종합목록시스템</a></li>
+            <li><a href="#">IIFLA 보존•복원(PAC) 한국센터</a></li>
+            <li><a href="#">ISNI-KOREA</a></li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- //service -->
+    <section class="public">
+      <div class="container">
+        <div class="notice_wrap clearfix">
+          <div class="notice_top clearfix">
+            <h2 class="cont_tt">소식알림</h2>
+            <div class="controls clearfix">
+              <p class="pager">1/3</p>
+              <p class="direction">
+                <button type="button" class="prev"><span class="hide">왼쪽버튼</span><i
+                    class="fas fa-chevron-left"></i></button>
+                <button type="button" class="next"><span class="hide">오른쪽버튼</span><i
+                    class="fas fa-chevron-right"></i></button>
+              </p>
+              <p class="pager_controls">
+                <button type="button" class="pause"><span class="hide">일시정지</span><i class="fas fa-pause"></i></button>
+                <!-- <button type="button" class="play"><span class="hide">재생</span><i class="fas fa-play"></i></button> -->
+              </p>
+            </div>
+            <div class="slide_wrap">
+              <ul class="notice_slide">
+                <li><a href="#"><img src="images/notice2.png" alt="의정부미술도서관 도서관 투어 프로그램 일시중단 안내"></a></li>
+                <li><a href="#"><img src="images/notice3.png" alt="의정부미술도서관 도서관 투어 프로그램 일시중단 안내"></a></li>
+                <li><a href="#"><img src="images/notice.jpg" alt="의정부미술도서관 도서관 투어 프로그램 일시중단 안내"></a></li>
+              </ul>
+            </div>
+          </div><!-- //notice_top -->
+          <aside>
+            <h2 class="hide">링크배너영역</h2>
+            <ul>
+              <li><a href="http://www.naver.com"><img src="images/bookreadtown.png" alt="책 읽는 마을 이야기"></a></li>
+              <li><a
+                  href="http://www.cdc.go.kr/gallery.es?mid=a20503020000&bid=0003&b_list=9&act=view&list_no=144658&nPage=1&vlist_no_npage=1&keyField=&keyWord=&orderby="><img
+                    src="images/korona.jpg" alt="코로나바이러스 감염증-19 예방 꼭 기억해야할 행동수칙"></a></li>
+            </ul>
+          </aside>
+        </div><!-- //aside -->
+      </div>
+
+    </section><!-- //public -->
+    <section class="book_list container">
+      <h2 class="hide">도서영역</h2>
+      <ul class="tabs_nav clearfix">
+        <li>
+          <h3><a href="#tabs_1" class="cont_tt active">신착도서</a></h3>
+        </li>
+        <li>
+          <h3><a href="#tabs_2" class="cont_tt">추천도서</a></h3>
+        </li>
+        <li>
+          <h3><a href="#tabs_3" class="cont_tt">추천 비도서</a></h3>
+        </li>
+      </ul>
+      <div id="tabs_1" class="tabs_panel_layout">
+        <div class="tabs_panel_wrap">
+          <ul class="tabs_panel clearfix">
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book1.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>살인자의쇼핑몰:강지영장편소설</h4>
+                <p><span>지은이:</span>정갑수</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book2.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>밥값 못하면 떠나라: 정갑수 시집</h4>
+                <p><span>지은이:</span>강지영</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book3.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>Sweet한 융합교육</h4>
+                <p><span>지은이:</span>경인교육대학교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book4.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>한미관계와 기독교</h4>
+                <p><span>지은이:</span>서울신학대학교 현대기독교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book5.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>(반 뼘)월드 뉴스영어:첫걸음</h4>
+                <p><span>지은이:</span>시사실용 영어연구팀,박승남</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book2.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>밥값 못하면 떠나라: 정갑수 시집</h4>
+                <p><span>지은이:</span>강지영</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book3.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>Sweet한 융합교육</h4>
+                <p><span>지은이:</span>경인교육대학교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book4.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>한미관계와 기독교</h4>
+                <p><span>지은이:</span>서울신학대학교 현대기독교</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="prev"><i class="fas fa-chevron-left"></i><span class="hide">왼쪽버튼</span></a>
+        <a href="#" class="next"><i class="fas fa-chevron-right"></i><span class="hide">오른쪽버튼</span></a>
+      </div>
+      <div id="tabs_2" class="tabs_panel_layout">
+        <div class="tabs_panel_wrap">
+          <ul class="tabs_panel clearfix">
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book3.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>test1살인자의쇼핑몰:강지영장편소설</h4>
+                <p><span>지은이:</span>정갑수</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book5.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>밥값 못하면 떠나라: 정갑수 시집</h4>
+                <p><span>지은이:</span>강지영</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book2.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>Sweet한 융합교육</h4>
+                <p><span>지은이:</span>경인교육대학교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book1.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>한미관계와 기독교</h4>
+                <p><span>지은이:</span>서울신학대학교 현대기독교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book4.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>(반 뼘)월드 뉴스영어:첫걸음</h4>
+                <p><span>지은이:</span>시사실용 영어연구팀,박승남</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book2.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>밥값 못하면 떠나라: 정갑수 시집</h4>
+                <p><span>지은이:</span>강지영</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book3.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>Sweet한 융합교육</h4>
+                <p><span>지은이:</span>경인교육대학교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book4.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>한미관계와 기독교</h4>
+                <p><span>지은이:</span>서울신학대학교 현대기독교</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="prev"><i class="fas fa-chevron-left"></i><span class="hide">왼쪽버튼</span></a>
+        <a href="#" class="next"><i class="fas fa-chevron-right"></i><span class="hide">오른쪽버튼</span></a>
+      </div>
+      <div id="tabs_3" class="tabs_panel_layout">
+        <div class="tabs_panel_wrap">
+          <ul class="tabs_panel clearfix">
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book4.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>test2살인자의쇼핑몰:강지영장편소설</h4>
+                <p><span>지은이:</span>정갑수</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book1.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>밥값 못하면 떠나라: 정갑수 시집</h4>
+                <p><span>지은이:</span>강지영</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book3.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>Sweet한 융합교육</h4>
+                <p><span>지은이:</span>경인교육대학교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book2.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>한미관계와 기독교</h4>
+                <p><span>지은이:</span>서울신학대학교 현대기독교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book5.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>(반 뼘)월드 뉴스영어:첫걸음</h4>
+                <p><span>지은이:</span>시사실용 영어연구팀,박승남</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book2.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>밥값 못하면 떠나라: 정갑수 시집</h4>
+                <p><span>지은이:</span>강지영</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book3.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>Sweet한 융합교육</h4>
+                <p><span>지은이:</span>경인교육대학교</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="cover">
+                  <img src="images/book4.jpg" alt="살인자의쇼핑몰:강지영장편소설">
+                </div>
+                <h4>한미관계와 기독교</h4>
+                <p><span>지은이:</span>서울신학대학교 현대기독교</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="prev"><i class="fas fa-chevron-left"></i><span class="hide">왼쪽버튼</span></a>
+        <a href="#" class="next"><i class="fas fa-chevron-right"></i><span class="hide">오른쪽버튼</span></a>
+      </div>
+    </section><!-- //book_list -->
+    <section class="inform">
+      <h2 class="hide">알림영역</h2>
+      <div class="container clearfix">
+        <section class="notice_wrap">
+          <h3 class="hide">공지영역</h3>
+          <ul class="tabs_nav">
+            <li><a href="#tabs_1" class="cont_tt active">정보도서관</a></li>
+            <li><a href="#tabs_2" class="cont_tt">가재울도서관</a></li>
+            <li><a href="#tabs_3" class="cont_tt">과학도서관</a></li>
+          </ul>
+          <ul id="tabs_1" class="tabs_panel one">
+            <li>
+              <a href="#">2020년 4월 정보도서관 북 큐레이션</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">제13회 기록사랑 공모전</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">의정부정보도서관의 인생서가를 소개합니다.</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">정보도서관 사물함 반납 안내</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">의정부미술도서관 3층 휴게음식점) 사용허가 입찰 공고안내 입니다.</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">2020년 마중물북큐레이팅 1분기</a><span>2020-04-02</span>
+            </li>
+          </ul>
+          <ul id="tabs_2" class="tabs_panel two">
+            <li>
+              <a href="#">2020년 마중물북큐레이팅 1분기</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">정보도서관 사물함 반납 안내</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">의정부정보도서관의 인생서가를 소개합니다.</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">제13회 기록사랑 공모전</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">의정부미술도서관 3층 휴게음식점) 사용허가 입찰 공고</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">2020년 마중물북큐레이팅 1분기</a><span>2020-04-02</span>
+            </li>
+          </ul>
+          <ul id="tabs_3" class="tabs_panel three">
+            <li>
+              <a href="#">의정부미술도서관 3층 휴게음식점) 사용허가 입찰 공고안내 입니다.</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">제13회 기록사랑 공모전</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">의정부정보도서관의 인생서가를 소개합니다.</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">정보도서관 사물함 반납 안내</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">의정부미술도서관 3층 휴게음식점) 사용허가 입찰 공고안내 입니다.</a><span>2020-04-02</span>
+            </li>
+            <li>
+              <a href="#">2020년 마중물북큐레이팅 1분기</a><span>2020-04-02</span>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="fas fa-caret-right"></i></a>
+        </section><!-- //notice_wrap -->
+        <section class="news_wrap">
+          <h3 class="hide">뉴스영역</h3>
+          <ul class="tabs_nav">
+            <li><a href="#tabs_1" class="cont_tt active">포토뉴스</a></li>
+            <li><a href="#tabs_2" class="cont_tt">카드뉴스</a></li>
+          </ul>
+          <ul id="tabs_1" class="tabs_panel clearfix">
+            <li>
+              <a href="#">
+                <img src="images/photonews1.jpg" alt="의정부 정보 도서관· 과학 도서관 청사 내·외부 환경정비 실시">
+                <h3>의정부 정보 도서관· 과학 도서관 청사 내·외부 환경정비 실시</h3>
+              </a>
+              <span>2020-04-06</span>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/photonews2.jpg" alt="200131_2020 ISNI 컨소시엄 신년회">
+                <h3>200131_2020 ISNI 컨소시엄 신년회</h3>
+              </a>
+              <span>2020-04-06</span>
+            </li>
+          </ul>
+          <ul id="tabs_2" class="tabs_panel clearfix">
+            <li>
+              <a href="#">
+                <img src="images/cardnews1.jpg" alt="의정부 정보 도서관· 과학 도서관 청사 내·외부 환경정비 실시">
+                <h3>test의정부 정보 도서관· 과학 도서관 청사 내·외부 환경정비 실시</h3>
+              </a>
+              <span>2020-04-06</span>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/cardnews2.jpg" alt="200131_2020 ISNI 컨소시엄 신년회">
+                <h3>200131_2020 ISNI 컨소시엄 신년회</h3>
+              </a>
+              <span>2020-04-06</span>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="fas fa-caret-right"></i></a>
+        </section><!-- //news_wrap -->
+      </div>
+    </section><!-- //inform -->
+    <section class="banner">
+      <div class="container clearfix">
+        <h2 class="cont_tt">배너모음</h2>
+        <div class="controls">
+          <button type="button" class="prev"><span class="hide">왼쪽버튼</span><i class="fas fa-angle-left"></i></button>
+          <button type="button" class="pause"><span class="hide">일시정지</span><i class="fas fa-pause"></i></button>
+          <button type="button" class="next"><span class="hide">오른쪽버튼</span><i class="fas fa-angle-right"></i></button>
+        </div>
+        <div class="notice_slide_wrapper">
+          <ul class="notice_slide clearfix">
+            <li><a href="#"><img src="images/banner1.png" alt="북스타트코리아"></a></li>
+            <li><a href="#"><img src="images/banner2.png" alt="한국도서관협회"></a></li>
+            <li><a href="#"><img src="images/banner3.png" alt="책나래"></a></li>
+            <li><a href="#"><img src="images/banner4.png" alt="문화체육관광부"></a></li>
+            <li><a href="#"><img src="images/banner5.png" alt="국립어린이청소년도서관"></a></li>
+            <li><a href="#"><img src="images/banner6.png" alt="국회도서관"></a></li>
+            <li><a href="#"><img src="images/banner2.png" alt="한국도서관협회"></a></li>
+            <li><a href="#"><img src="images/banner3.png" alt="책나래"></a></li>
+            <li><a href="#"><img src="images/banner4.png" alt="문화체육관광부"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- //banner -->
+  </div>
+  <footer class="container">
+    <ul class="policy clearfix">
+      <li><a href="#">개인정보보호정책</a></li>
+      <li><a href="#">이메일무단수집거부</a></li>
+      <li><a href="#">사진정보공개</a></li>
+      <li><a href="#">저작권정책</a></li>
+    </ul>
+    <address>
+      <p>과학도서관 : (우) 11780 경기도 의정부시 추동로124번길 52(신곡동)
+        전화 : 031-828-8670 팩스 : 031-828-8649</p>
+      <p>정보도서관 : (우) 11622 경기도 의정부시 의정로 41 (의정부동)
+        전화 : 031-828-8700 팩스 : 031-828-8699</p>
+      <p>가재울도서관 : (우) 11678 경기도 의정부시 평화로 633 (가능동)
+        전화 : 031-828-8660 팩스 : 031-828-8649</p>
+    </address>
+    <p>copyright&copy; uni.uilib.net all rights reserved.</p>
+    <div class="logo">
+      <img src="images/logo.gif" alt="책읽은도시 의정부 로고">
+    </div>
+    <a id="back-to-top" href="#"><i class="fas fa-angle-double-up"></i><span class="hide">Top</span></a>
+  </footer>
+  <div class="popup">
+    <p>
+      본 사이트는 구직용 포트폴리오 시범 사이트입니다.<br>
+      의정부도서관과 무관함을 안내드립니다.
+    </p>
+    <em>이미지와 내용의 저작권은 의정부도서관에 있습니다.</em>
+    <div class="checkbox_wrap">
+      <label for="popup_check">오늘 하루 안보기</label>
+      <input type="checkbox" id="popup_check">
+    </div>
+    <button type="button" class="close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <script>
+    var btt = document.querySelector('#back-to-top'),
+      docElem = document.documentElement, // 문서 자체를 불러오기
+      scrollAmount;
+
+    // 스크롤 이벤트 추가
+    window.addEventListener('scroll', function () {
+      //scrollAmount = docElem.scrollTop;
+      scrollAmount = this.pageYOffset;
+      console.log(scrollAmount);
+
+      if (scrollAmount > 1100) {
+        btt.className = 'visible';
+      } else {
+        btt.classList.remove('visible');
+      }
+    });
+
+    // 클릭 이벤트 추가
+    btt.addEventListener('click', function (event) {
+      event.preventDefault();
+      //window.pageYOffset = 0; 불가
+      //docElem.scrollTop = 0; 가능
+      //window.scrollTo(0, 0);
+      /*
+          일정 시간마다 스크롤양을 조금씩 뺀다.
+          setInterval(할일, 시간);
+          할일 함수 function(){...}
+          실제 할 일: window.scrollBy(0, -55);
+      */
+
+      var timer = setInterval(function () {
+
+        if (scrollAmount != 0) {
+          window.scrollBy(0, -55);
+        } else {
+          clearInterval(timer);
+        }
+      }, 15);
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+/* typhography */
+body {
+	font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
+	color: #303030;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+a {
+	color: #303030;
+}
+.highlight {
+	color: #3591dc !important;
+}
+/* layout */
+.container {
+	width: 1240px;
+	margin: 0 auto;
+}
+.cont_tt {
+	font-size: 19px;
+	color: #878787;
+	font-weight: 400;
+}

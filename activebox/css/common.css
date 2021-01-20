@@ -1,0 +1,9 @@
+/* typography */
+/* @font-face {
+    font-family: SourceSansPro;
+    src: url('source-sans-pro/SourceSansPro-Bold.otf');
+    font-weight: bold;
+} */
+body { font-family: 'Raleway', sans-serif; line-height: 1; font-size: 14px; color: #6c7279;}
+/* layout */
+.container { max-width: 1170px; width: 100%; margin: 0 auto;}
