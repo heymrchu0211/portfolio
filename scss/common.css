@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/************************ color ***********************/
+/************************ breakpoints ***********************/
+/************************ color ***********************/
+/************************ breakpoints ***********************/
+/************************ breakpoints ***********************/
+html {
+  font-size: 62.5%;
+  /* 62.5%라는 것은 브라우저가 기본으로 제공하는 폰트사이즈의 62.5% 즉, 10px이라는 뜻이다. 1rem을 16px이 아닌 10px로 만들면 계산을 용이하게 할 수 있기 때문에 62.5%로 설정 하였다. */ }
+
+body {
+  line-height: 1;
+  background-color: #f2f2fc;
+  letter-spacing: 0.02em;
+  /* 본인 요소의 폰트사이즈인 16px 곱하기 0.02 = 0.32px이 된다.*/
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.6rem;
+  word-break: keep-all;
+  color: #302e4d; }
+
+.section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 38.4rem;
+  bottom: 0;
+  z-index: 2;
+  height: 100vh;
+  padding: 0 5rem;
+  background-color: #f2f2fc;
+  overflow-y: auto; }
+  @media (max-width: 1080px) {
+    .section {
+      left: 30.4rem; } }
+  @media (max-width: 992px) {
+    .section {
+      left: 0; } }
+  .section.back {
+    z-index: 3; }
+  .section.active {
+    z-index: 9;
+    -webkit-animation: smooth 1s ease;
+            animation: smooth 1s ease; }
+@-webkit-keyframes smooth {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+@keyframes smooth {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+h2 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700; }
+  @media (max-width: 1080px) {
+    h2 {
+      font-size: 2.7rem; } }
+
+.section:not(:first-child) {
+  padding-top: 7rem; }
+  @media (max-width: 992px) {
+    .section:not(:first-child) {
+      padding-top: 10rem; } }
+  .section:not(:first-child) h2:before, .section:not(:first-child) h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4px;
+    background-color: #eb1839; }
+  .section:not(:first-child) h2:before {
+    width: 50px;
+    bottom: -16px; }
+  .section:not(:first-child) h2:after {
+    width: 25px;
+    bottom: -24px; }
+  .section:not(:first-child) > p {
+    line-height: 1.6em;
+    margin: 5rem 0;
+    font-size: 1.9rem; }
+    @media (max-width: 500px) {
+      .section:not(:first-child) > p {
+        font-size: 1.6rem; } }
+
+/*# sourceMappingURL=common.css.map */

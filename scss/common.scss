@@ -1,0 +1,99 @@
+@import "variable", "mixin";
+
+html {
+  font-size: 62.5%; /* 62.5%라는 것은 브라우저가 기본으로 제공하는 폰트사이즈의 62.5% 즉, 10px이라는 뜻이다. 1rem을 16px이 아닌 10px로 만들면 계산을 용이하게 할 수 있기 때문에 62.5%로 설정 하였다. */
+}
+
+body { 
+  line-height: 1;
+  background-color: #f2f2fc;
+  letter-spacing: 0.02em; /* 본인 요소의 폰트사이즈인 16px 곱하기 0.02 = 0.32px이 된다.*/
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.6rem; 
+  word-break: keep-all;
+  color: $color-primary;
+}
+
+.section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 38.4rem;
+  bottom: 0;
+  z-index: 2; 
+  height: 100vh;
+  padding: 0 5rem;
+  background-color: #f2f2fc;
+  overflow-y: auto;
+
+  @include large {
+    left: 30.4rem;
+  }
+
+  @include medium {
+    left: 0;
+  }
+
+  &.back {
+    z-index: 3; 
+  }
+  &.active {
+    z-index: 9; 
+    animation: smooth 1s ease;
+  }
+  @keyframes smooth {
+    0% { transform: translateX(100%);}
+    100% { transform: translateX(0);}
+  }
+}
+
+
+h2 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+
+  @include large {
+    font-size: 2.7rem;
+  }
+}
+
+.section:not(:first-child) {
+  padding-top: 7rem;
+
+  @include medium {
+    padding-top: 10rem;
+  }
+
+  h2 {
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 4px;
+      background-color: $color-point;
+    }
+
+    &:before {
+      width: 50px;
+      bottom: -16px;
+    }
+
+    &:after {
+      width: 25px;
+      bottom: -24px;
+    }
+  }
+
+  > p {
+    line-height: 1.6em;
+    margin: 5rem 0;
+    font-size: 1.9rem;
+
+    @include small {
+      font-size: 1.6rem;
+    }
+  }
+}

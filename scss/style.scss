@@ -1,0 +1,914 @@
+@import "mixin", "variable", "common";
+
+/************************ preloading ***********************/
+
+.overlay-preloading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  opacity: 1;
+  transition: 1s .5s;
+
+  &.opacity-zero {
+    opacity: 0;
+  }
+
+  &__preloading {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e3e3e3;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+}
+
+/************************ header ***********************/
+
+.header {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 38.4rem;
+  height: 100vh;
+  padding: 7rem 4rem;
+  background-color: #fdf9ff;
+  transition: .3s;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &.active-z-index {
+    z-index: 9;
+  }
+
+  @include large {
+    width: 30.4rem;
+  }
+
+  @include medium {
+    transform: translateX(-100%);
+    z-index: 11;
+  }
+
+  h1 {
+    align-self: flex-start;
+  }
+
+  .logo {
+    position: relative;
+    display: block;
+    padding: 0 3.4rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.8rem;
+    color: $color-primary;
+  
+    @include large {
+      font-size: 3.2rem;
+    }
+  
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-point;
+    }
+    &:before {
+      content: '<';
+      left: 0;
+    }
+    &:after {
+      content: '>';
+      right: 0;
+    }
+  }
+
+  &__nav-item {
+    border-bottom: 1px solid #e9deec;
+  }
+
+  &__nav-name {
+    position: relative;
+    display: block;
+    padding: 2rem 0 2rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: $color-primary;
+    font-size: 1.8rem;
+    transition: margin-left .4s;
+
+    @include large {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      margin-left: .5rem;
+    }
+
+    &:before {
+      @include fontawesome;
+      @include align-position;
+    }
+
+    &--active {
+      color: $color-point;
+    }
+  }
+  
+  &__nav-name--home:before {
+    content: '\f015';
+  }
+  &__nav-name--about:before {
+    content: '\f007';
+  }
+  &__nav-name--skills:before {
+    content: '\f0ad';
+  }
+  &__nav-name--portfolio:before {
+    content: '\f0b1';
+  }
+}
+
+.contact-item { 
+  position: relative;
+  padding-left: 2.6rem;
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+  color: #7d7d7d;
+
+  &:before {
+    @include fontawesome;
+    @include align-position;
+  }
+}
+
+.contact-item--phone:before {
+  content: '\f3cd';
+}
+
+.contact-item--email:before {
+  content: '\f0e0';
+}
+
+.btn-hamburger {
+  display: none;
+  position: absolute;
+  left: 35.4rem;
+  top: 20px;
+  z-index: 10;
+  width: 42px;
+  height: 40px;
+  border: 1px solid #d3d5e2;
+  border-radius: 3px;
+  background-color: #fdf9ff;
+  cursor: pointer;
+  transition: .3s;
+
+  @include medium {
+    display: block;
+  }
+}
+.active .btn-hamburger {
+  left: 30.4rem;
+}
+.btn-hamburger__patty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 20px;
+  height: 4px;
+  background-color: $color-point;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: $color-point;
+  }
+
+  &:before {
+    top: -10px;
+  }
+  
+  &:after {
+    top: 10px;
+  }
+
+  .active &:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  
+  .active &:after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.active .btn-hamburger__patty {
+  background-color: transparent;
+}
+
+.dim {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+
+  &.active {
+    z-index: 10;
+  }
+}
+
+/************************ home ***********************/
+
+.home { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__avatar-wrap {
+    @include box-shadow;
+
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include small {
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  &__avatar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+  }
+
+  h2 {
+    position: relative;
+    line-height: 1.6em;
+    margin-top: 3.6rem;
+
+    @include large {
+      font-size: 2.8rem;
+    }
+
+    @include small {
+      font-size: 2rem;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: $color-primary;
+    }
+
+    &.active:after {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 2rem 0 3rem;
+    font-size: 2rem;
+    line-height: 1.6em;
+
+    @include large {
+      font-size: 1.8rem;
+    }
+
+    @include small {
+      font-size: 1.6rem;
+    }
+  }
+
+  .external-link-list {
+    display: flex;
+
+    &__item {
+      margin: 0 .6rem;
+    }
+
+    &__direct {
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: $color-point;
+      transition: transform .2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:before {
+        @include fontawesome;
+        font-size: 2.2rem;
+        color: #fff;
+      }
+    }
+
+    &__direct--resume:before {
+      content: '\f15c';
+    }
+    
+    &__direct--velog:before {
+      content: '\f781';
+    }
+    
+    &__direct--github:before {
+      font-family: 'Font Awesome 5 Brands';
+      content: '\f09b';
+    }
+  }
+}
+
+/************************ about ***********************/
+.about {
+  
+  &__wrap {
+    background-color: #333;
+    color: #fff;
+    letter-spacing: 0.04em;
+    font-size: 1.7rem;
+
+    h3 {
+      display: inline-block;
+      padding: 5px;
+      font-size: 1.8rem;
+      background-color: #161616;
+    }
+  }
+  
+  &__item {
+    padding: 1.2rem;
+    border-bottom: 1px solid #444;
+
+    &:last-child span {
+      color: #808080;
+    }
+  }
+
+  &__item--border-top {
+    border-top: 1px solid #444;
+  }
+
+  &__command {
+    position: relative;
+    margin-bottom: 1.6rem;
+
+    &:before {
+      @include fontawesome;
+
+      content: '\f054';
+      margin-right: .7rem;
+      color: #326dc7;
+    }
+
+    span {
+      color: #eed91e;
+    }
+  }
+  
+  &__value {
+    &:before {
+      @include fontawesome;
+
+      content: '\f053';
+      margin-right: .7rem;
+      color: #808080;
+    }
+    span {
+      color: #326dc7;
+    }
+  }
+}
+
+/************************ skills ***********************/
+.skills {
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+  }
+
+  &__item {    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    width: calc(33.333% - 3rem);
+    height: 30rem;
+    padding: 3rem 1.5rem;
+    border: 1px solid #d3d5e2;
+    border-radius: 10px;
+    margin: 0 1.5rem 3rem;
+    background-color: #fdf9ff;
+    
+    @include extra-large {
+      width: calc(50% - 3rem);
+    }
+
+    @include large {
+      width: calc(100% - 3rem);
+    }
+
+    &:hover {
+      @include box-shadow;
+    }
+
+    h3 {
+      font-size: 2rem; 
+      font-weight: 700;
+    }
+
+    p {
+      line-height: 1.6em; 
+      font-size: 1.8rem;
+      text-align: center;
+      word-break: keep-all; 
+    }
+  } 
+
+  &__icon {
+    height: 7rem; 
+  }
+}
+
+/************************ portfolio ***********************/
+.portfolio {
+  &__list {
+    @extend .skills__list;
+  }
+
+  &__item {
+    width: calc(33.333% - 3rem);
+    height: 30rem;
+    border: 1px solid #d3d5e2;
+    border-radius: 10px;
+    margin: 0 1.5rem 3rem;
+    overflow: hidden;
+
+    @include extra-large {
+      width: calc(50% - 3rem);
+    }
+
+    @include large {
+      width: calc(100% - 3rem);
+    }
+  }
+
+  &__more-wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    background: no-repeat center / 70% #fdf9ff;
+    
+    &--bg-kixx {
+      background-image: url(../images/logo_kixx.png);
+    }
+
+    &--bg-lotte {
+      background-image: url(../images/logo_lotte.png);
+    }
+
+    &--bg-ujb {
+      background-image: url(../images/logo_ujb.gif);
+    }
+
+    &--bg-activebox {
+      background-image: url(../images/logo_activebox.png);
+    }
+
+   &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0);
+      transition: .2s;
+   }
+
+    &:hover:after {
+      background-color: rgba(0,0,0,.8);
+    }
+
+    &:hover .portfolio__btn-more {
+      opacity: 1;
+    }
+  }
+
+  &__btn-more {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    transition: .2s;
+    cursor: pointer;
+
+    .fas {
+      font-size: 7rem;
+      color: $color-point;
+    }
+  }
+
+  .portfolio-modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(29, 28, 28, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__body {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,100%);
+      width: 70%;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: #fff;
+      transition: .4s;
+
+      @include medium {
+        width: 90%;
+      }
+    }
+
+    &__body.active {
+      transform: translate(-50%,-50%);
+    }
+
+    &__info-wrap {
+      h3 {
+        font-size: 3rem;
+        font-weight: 700;
+
+        @include small {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__preface {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0;
+
+      @include medium {
+        flex-direction: column;
+      }
+      
+      p {
+        line-height: 1.4em;
+        font-size: 1.8rem;
+
+        @include small {
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &__direct-link-wrap {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    &__worker-number {
+      font-size: 1.8rem;
+
+      @include small {
+        font-size: 1.4rem;
+      }
+
+      &:before {
+        content: '\f007';
+        margin-right: .5rem;
+
+        @include fontawesome;
+      }
+    }
+
+    &__direct-link {
+      display: inline-block; /* ie에서 a요소가 크기를 가지지 못하기 때문에 inline-block 줘야함 */
+      flex: 1;
+      padding: 1rem 0;
+      background-color: $color-primary;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #fff;
+      transition: .4s;
+
+      @include small {
+        font-size: 1.3rem;
+      }
+
+      &:hover {
+        background-color: #09044d;
+      }
+
+      &:before {
+        margin-right: 5px;
+
+        @include fontawesome;
+      }
+
+      &:first-child {
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+
+        &:before {
+          content: '\f09b';
+          font-family: 'Font Awesome 5 Brands';
+        }
+      }
+
+      &:last-child {
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+
+        &:before {
+          content: '\f0c1';
+        }
+      }
+    }
+
+    &__btn-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 7rem; 
+      height: 7rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      transform: translate(100%,-100%); 
+      cursor: pointer;
+
+      @include medium {
+        width: 4rem;
+        height: 4rem;
+        transform: translate(-2rem, 2rem);
+      }
+
+      @include small {
+        width: 3rem;
+        height: 3rem;
+        transform: translate(-2rem, 2rem);
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(0);
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+
+        @include medium {
+          width: 20px;
+        }
+
+        @include small {
+          width: 15px;
+        }
+      }
+
+      &:before {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+
+      &:after {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+    }
+
+    &__description-wrap {
+      height: 50vh;
+      overflow-y: auto;
+    }
+
+    &__slide-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      box-shadow: inset 0 0 10px 2px rgba(0,0,0,.2);
+    }
+
+    &__slide-list {
+      position: relative;
+      width: 40rem;
+      height: 20rem;
+      box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+
+      @include large {
+        width: 30rem;
+        height: 15rem;
+      }
+
+      @include small {
+        width: 20rem;
+        height: 10rem;
+      }
+    }
+
+    &__slide-item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      &.active {
+        z-index: 1;
+      }
+
+      a {
+        cursor: zoom-in;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__button-prev,
+    &__button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,.2);
+      cursor: pointer;
+
+      @include small {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &.display-none {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+      }
+
+      &:after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 3rem;
+        color: #fff;
+        
+        @include fontawesome;
+
+        @include small {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__button-prev {
+      left: 20%;
+
+      @include extra-large {
+        left: 10%;
+      }
+
+      @include small {
+        left: 5%;
+      }
+
+      &:after {
+        content: '\f104';
+      }
+    }
+
+    &__button-next {
+      right: 20%;
+
+      @include extra-large {
+        right: 10%;
+      }
+
+      @include small {
+        right: 5%;
+      }
+
+      &:after {
+        content: '\f105';
+      }
+    } 
+    
+    &__explain-wrap {
+      padding-top: 3rem;
+
+      dt {
+        padding: 1rem 0;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      dd {
+        position: relative;
+        padding-left: 3rem;
+        line-height: 1.8em;
+        font-size: 1.7rem;
+
+        @include small {
+          line-height: 1.7em;
+          font-size: 1.4rem;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 1.5rem;
+          top: 1.1rem;
+          width: 6px;
+          height: 6px;
+          background-color: $color-primary;
+
+          @include small {
+            top: .8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/***** ie cross browsing *****/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .home__avatar {
+    width: auto;
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  .skills__item p {
+    width: 100%; /* ie에서 width 100%를 써줘야 p의 컨텐츠가 플렉스 컨테이너를 벗어나지 않음 */
+  }
+}

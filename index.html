@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!-- 해당 웹페이지가 HTML5 표준을 따른다는 뜻-->
+<html lang="ko">
+<!-- 화면 낭독기 (스크린 리더 등의 보조기기)가 해당 언어를 인식하고 자동으로 음성을 변환하고 해당 언어에 적합한 발음을 제공할 수 있도록 lang속성값을 명시해줘야 함(한국형 웹 컨텐츠 접근성 지침) -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 웹페이지의 텍스트를 출력할때 사용할 인코딩 방식을 정의 , UTF-8은 모든 언어의 문자를 지원하는 인코딩 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 뷰포트(화면에 보여지는 영역)를 디바이스의 너비에 따라 설정한다는 뜻 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 구형 IE의 대응을 위한것으로 해당 웹페이지를 최신 표준모드로 해석하라는 뜻 -->
+  <meta name="robots" content="index, follow">
+  <!-- index는 검색로봇이 해당 웹페이지를 수집 대상으로 한다는 뜻, follow는 해당 웹페이지와 함께 링크가 걸린 곳을 수집한다는 뜻 -->
+  <title>Portfolio - Kim Chunyeong</title>
+  <!-- 브라우저의 제목 표시줄에 출력되는 웹페이지의 제목-->
+
+  <!-- google webfont cdn -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+KR:wght@400;500;700&family=Rubik:wght@900&display=swap">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="icon" href="images/favicon/favicon.ico">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- description -->
+  <meta name="author" content="김춘영">
+  <!-- 웹페이지의 저자 -->
+  <meta name="description" content="신입 웹퍼블리셔 지원자 김춘영의 포트폴리오 페이지입니다.">
+  <!-- 검색 결과에 표시되는 단어 -->
+  <meta name="keywords" content="웹퍼블리셔, HTML, CSS, Javascript, jQuery">
+  <!-- 검색 엔진에 의해 검색되는 단어 -->
+
+  <!-- facebook open graph meta tags 페이스북이나 카카오톡에서 링크를 공유 받을때 해당 웹페이지의 이미지와 제목 등을 미리보기 할 수 있도록 함 -->
+  <meta property="og:title" content="포트폴리오 - 웹퍼블리셔 김춘영">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="신입 웹퍼블리셔 지원자 김춘영의 포트폴리오 페이지입니다.">
+
+  <link rel="stylesheet" href="scss/reset.css">
+  <link rel="stylesheet" href="scss/common.css">
+  <link rel="stylesheet" href="scss/style.css">
+
+<body>
+  <div class="overlay-preloading">
+    <div class="overlay-preloading__preloading">
+      <span class="blind">페이지 로딩중입니다.</span>
+    </div>
+  </div>
+  <!-- //preloading -->
+  <header class="header">
+    <h1>
+      <a class="logo" href="#">mrchun/</a>
+    </h1>
+    <nav>
+      <ul>
+        <li class="header__nav-item">
+          <a class="header__nav-name header__nav-name--home header__nav-name--active" href="#home">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-name header__nav-name--about" href="#about">About</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-name header__nav-name--skills" href="#skills">Skills</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-name header__nav-name--portfolio" href="#portfolio">Portfolio</a>
+        </li>
+      </ul>
+    </nav>
+    <ul>
+      <li class="contact-item contact-item--phone">010-2841-1521</li>
+      <li class="contact-item contact-item--email">heymrchun0211@gmail.com</li>
+    </ul>
+    <button type="button" class="btn-hamburger">
+      <span class="btn-hamburger__patty">
+        <span class="blind">전체메뉴 버튼</span>
+      </span>
+    </button>
+  </header>
+  <!-- //header -->
+  <div class="dim">
+    <span class="blind">뒷배경</span>
+  </div>
+  <!-- //dim -->
+  <main>
+    <section class="section home active" id="home">
+      <figure class="home__avatar-wrap">
+        <img class="home__avatar" src="images/profile_pohoto.jpg" alt="프로필 사진">
+      </figure>
+      <h2>신입 웹퍼블리셔 지원자 김춘영입니다.</h2>
+      <p>
+        이 포트폴리오 페이지는 Internet Explorer 10 이상에 최적화 되어 있습니다.
+      </p>
+      <ul class="external-link-list">
+        <li class="external-link-list__item">
+          <a class="external-link-list__direct external-link-list__direct--resume" href=""><span class="blind">이력서 링크
+              아이콘</span></a>
+        </li>
+        <li class="external-link-list__item">
+          <a class="external-link-list__direct external-link-list__direct--velog" href=""><span class="blind">벨로그 링크
+              아이콘</span></a>
+        </li>
+        <li class="external-link-list__item">
+          <a class="external-link-list__direct external-link-list__direct--github" href=""><span class="blind">깃허브 링크
+              아이콘</span></a>
+        </li>
+      </ul>
+    </section>
+    <!-- //home -->
+    <section class="section about" id="about">
+      <h2>About</h2>
+      <p>콘솔창의 형태를 빌려 간단히 제 소개를 해봤습니다.</p>
+      <div class="about__wrap">
+        <h3>Console</h3>
+        <dl class="about__item about__item--border-top">
+          <dt class="about__command">name;</dt>
+          <dd class="about__value">"<span>김춘영</span>"</dd>
+        </dl>
+        <dl class="about__item">
+          <dt class="about__command">[birth.<span>year</span>, birth.<span>month</span>,
+            birth.<span>day</span>].<span>join</span>('.');</dt>
+          <dd class="about__value">"<span>1995.02.11</span>"</dd>
+        </dl>
+        <dl class="about__item">
+          <dt class="about__command">location;</dt>
+          <dd class="about__value">"<span>경기도 양주시</span>"</dd>
+        </dl>
+        <dl class="about__item">
+          <dt class="about__command">company; <span>// 채용으로 값을 채워주세요.</span></dt>
+          <dd class="about__value"><span>undefined</span></dd>
+        </dl>
+      </div>
+    </section>
+    <!-- //about -->
+    <section class="section skills" id="skills">
+      <h2>Skills</h2>
+      <p>제가 지금 공부중인 기술들입니다.</p>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_html.svg" alt="html 아이콘">
+          <h3>HTML</h3>
+          <p>
+            논리적인 구조와 컨텐츠의 의미에 적합한 요소들을 사용하는 HTML 작성을 지향합니다.(시멘틱 마크업)
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_css.svg" alt="css 아이콘">
+          <h3>CSS</h3>
+          <p>
+            불필요하거나 중복되는 스타일은 제거하고 재사용이 용이한 CSS 작성을 지향합니다.(유지보수)
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_javascript.svg" alt="javascript 아이콘">
+          <h3>JavaScript</h3>
+          <p>
+            자바스크립트를 사용하여 Slider, Tabs, Accordion 형태의 컨텐츠와 Scroll,Click 등의 이벤트를 구현할 수 있습니다.
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_sass.svg" alt="sass 아이콘">
+          <h3>SASS(SCSS)</h3>
+          <p>
+            SASS를 사용하여 가독성을 확보하고 Variable, Mixins, Extends 등을 사용하여 CSS의 반복작업을 최소화할 수 있습니다.
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_sourcetree.png" alt="sourcetree 아이콘">
+          <h3>SourceTree</h3>
+          <p>
+            git을 이용한 버전관리를 좀 더 편리하게 해주는 SourceTree를 사용하여 작업물을 보존할 수 있습니다.
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_bem.svg" alt="bem 아이콘">
+          <h3>BEM</h3>
+          <p>
+            BEM의 네이밍 규칙을 사용하여 일관성있고 직관적인 HTML 작성 및 수정을 할 수 있습니다.
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_standard.png" alt="standard 아이콘">
+          <h3>Web Standard</h3>
+          <p>
+            W3의 표준 권고안에 따른 웹페이지 제작을 지향하여 검색엔진 노출 및 유지관리가 용이하도록 해야합니다.
+          </p>
+        </li>
+        <li class="skills__item">
+          <img class="skills__icon" src="images/ico_accessibility.png" alt="accessibility 아이콘">
+          <h3>Web Accessibility</h3>
+          <p>
+            특정 사용자 또는 특정 사용환경에 국한되지 않고 모두가 동등한 수준으로 웹페이지의 정보를 습득할 수 있도록 해야합니다.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- //skills -->
+    <section class="section portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <p>
+        제가 작업한 웹페이지 목록입니다.<br>
+        왼쪽 상단에 있을수록 최신 작업물입니다.
+      </p>
+      <ul class="portfolio__list">
+        <li class="portfolio__item">
+          <div class="portfolio__more-wrap portfolio__more-wrap--bg-kixx">
+            <button type="button" class="portfolio__btn-more">
+              <i class="fas fa-search-plus"></i>
+              <span class="blind">kixx 작업물 자세히 보기 버튼</span>
+            </button>
+          </div>
+          <div class="portfolio-modal">
+            <div class="portfolio-modal__body">
+              <div class="portfolio-modal__info-wrap">
+                <h3>Kixx</h3>
+                <div class="portfolio-modal__preface">
+                  <p>현재 운영되고 있는 Kixx의 웹페이지를 캡쳐하여 클론코딩 하였습니다.</p>
+                  <span class="portfolio-modal__worker-number">1</span>
+                </div>
+                <div class="portfolio-modal__direct-link-wrap">
+                  <a class="portfolio-modal__direct-link" href="kixx/index.html">Github 바로가기</a>
+                  <a class="portfolio-modal__direct-link" href="">웹페이지 바로가기</a>
+                </div>
+              </div>
+              <div class="portfolio-modal__description-wrap">
+                <div class="portfolio-modal__slide-wrap">
+                  <ul class="portfolio-modal__slide-list">
+                    <li class="portfolio-modal__slide-item active">
+                      <a href="images/img_slide_kixx1.jpg" target="_blink">
+                        <img src="images/img_slide_kixx1.jpg" alt="kixx 첫번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_kixx2.jpg" target="_blink">
+                        <img src="images/img_slide_kixx2.jpg" alt="kixx 두번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_kixx3.jpg" target="_blink">
+                        <img src="images/img_slide_kixx3.jpg" alt="kixx 세번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_kixx4.jpg" target="_blink">
+                        <img src="images/img_slide_kixx4.jpg" alt="kixx 네번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="portfolio-modal__button-prev" type="button">
+                    <span class="blind">왼쪽 버튼</span>
+                  </button>
+                  <button class="portfolio-modal__button-next" type="button">
+                    <span class="blind">오른쪽 버튼</span>
+                  </button>
+                </div>
+                <div class="portfolio-modal__explain-wrap">
+                  <dl>
+                    <dt>구현 페이지</dt>
+                    <dd>메인 페이지</dd>
+                    <dt>HTML</dt>
+                    <dd>BEM 네이밍 규칙을 사용하여 HTML 작성</dd>
+                    <dd><a href="https://validator.w3.org/" target="_blank">w3 validator</a>유효성 검사에서 에러 발견되지 않음</dd>
+                    <dd>meta요소를 사용하여 검색로봇 노출과 접근성을 향상</dd>
+                    <dd>숨김텍스트를 제공하여 화면낭독기 사용자들의 접근성 향상</dd>
+                    <dt>CSS</dt>
+                    <dd><a href="http://koala-app.com/">코알라</a>를 사용하여 SASS(SCSS) 작성</dd>
+                    <dd>반복적으로 사용할 스타일들을 변수와 믹스인으로 지정</dd>
+                    <dd>반응형 대응을 위해 특정 해상도 구간별로 스타일 작성</dd>
+                    <dd>사용자가 브라우저의 글꼴사이즈를 바꿔도 그에 맞게 대응할 수 있도록 px대신 rem단위를 사용</dd>
+                    <dd>flexbox layout module를 사용하여 레이아웃 지정(IE 10이상 대응)</dd>
+                    <dd>속성 작성순서는 position - display - width,height,padding,margin - background - font-size,color - 기타
+                      순으로 작성함</dd>
+                    <dt>Javascript</dt>
+                    <dd>제이쿼리 라이브러리를 사용하지 않고 순수 자바스크립트 사용</dd>
+                    <dd>인터넷 익스플로러 10 이상에 대응하기 위해 const,let대신 var를 사용하여 변수 정의</dd>
+                    <dd>주석을 꼼꼼히 작성하여 다른 사람이 열람할때 또는 시간이 지나서 내가 나중에 다시 볼때 가독성을 높일 수 있도록 함</dd>
+                    <dt>웹 접근성</dt>
+                    <dd>화면낭독기 사용자들을 위한 웹 접근성을 준수하기 위해 본문 바로 가기를 제작</dd>
+                    <dt>최적화</dt>
+                    <dd>이미지의 파일크기를 최대한 경량화 하여 웹페이지의 로딩속도가 저하 되지 않도록 함</dd>
+                    <dt>까다로웠던 점과 보완해야 할 점</dt>
+                    <dd>HTML 클래스명을 지을때 각각의 요소가 갖는 역할에 맞게 클래스명을 지으려고 했는데 그 과정이 조금 까다로웠음</dd>
+                    <dd>반복되는 CSS를 정리하고 관리하는 것이 다소 까다로웠음. 관련해서 방법을 더 찾아봐야 함</dd>
+                    <dd>SASS를 사용하긴 했으나 아직 모르는 문법들이 많고 활용법이 미숙하여 많은 공부가 필요함</dd>
+                    <dd>캐러셀 슬라이드, 드래그가 가능한 요소 등을 구현하였지만 구현하는데만 급급했음. 문법과 효율적인 코드 작성에 대한 자세한 공부가 필요함</dd>
+                  </dl>
+                </div>
+              </div>
+              <button class="portfolio-modal__btn-close" type="button">
+                <span class="blind">닫기 버튼</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__more-wrap portfolio__more-wrap--bg-lotte">
+            <button type="button" class="portfolio__btn-more">
+              <i class="fas fa-search-plus"></i>
+              <span class="blind">롯데자산개발 작업물 자세히 보기 버튼</span>
+            </button>
+          </div>
+          <div class="portfolio-modal">
+            <div class="portfolio-modal__body">
+              <div class="portfolio-modal__info-wrap">
+                <h3>Kixx</h3>
+                <div class="portfolio-modal__preface">
+                  <p>현재 운영되고 있는 롯데자산개발의 웹페이지를 캡쳐하여 클론코딩 하였습니다.</p>
+                  <span class="portfolio-modal__worker-number">1</span>
+                </div>
+                <div class="portfolio-modal__direct-link-wrap">
+                  <a class="portfolio-modal__direct-link" href="">Github 바로가기</a>
+                  <a class="portfolio-modal__direct-link" href="">웹페이지 바로가기</a>
+                </div>
+              </div>
+              <div class="portfolio-modal__description-wrap">
+                <div class="portfolio-modal__slide-wrap">
+                  <ul class="portfolio-modal__slide-list">
+                    <li class="portfolio-modal__slide-item active">
+                      <a href="images/img_slide_lotte1.jpg" target="_blink">
+                        <img src="images/img_slide_lotte1.jpg" alt="롯데자산개발 첫번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_lotte2.jpg" target="_blink">
+                        <img src="images/img_slide_lotte2.jpg" alt="롯데자산개발 두번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_lotte3.jpg" target="_blink">
+                        <img src="images/img_slide_lotte3.jpg" alt="롯데자산개발 세번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_lotte4.jpg" target="_blink">
+                        <img src="images/img_slide_lotte4.jpg" alt="롯데자산개발 네번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="portfolio-modal__button-prev display-none" type="button">
+                    <span class="blind">왼쪽 버튼</span>
+                  </button>
+                  <button class="portfolio-modal__button-next" type="button">
+                    <span class="blind">오른쪽 버튼</span>
+                  </button>
+                </div>
+                <div class="portfolio-modal__explain-wrap">
+                  <dl>
+                    <dt>구현 페이지</dt>
+                    <dd>메인 페이지,로그인 모달창,회사소개 페이지(CEO인사말,연혁,조직도),고객지원 페이지(공지사항,고객문의)</dd>
+                  </dl>
+                </div>
+              </div>
+              <button class="portfolio-modal__btn-close" type="button">
+                <span class="blind">닫기 버튼</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__more-wrap portfolio__more-wrap--bg-ujb">
+            <button type="button" class="portfolio__btn-more">
+              <i class="fas fa-search-plus"></i>
+              <span class="blind">의정부도서관 작업물 자세히 보기 버튼</span>
+            </button>
+          </div>
+          <div class="portfolio-modal">
+            <div class="portfolio-modal__body">
+              <div class="portfolio-modal__info-wrap">
+                <h3>Kixx</h3>
+                <div class="portfolio-modal__preface">
+                  <p>현재 운영되고 있는 의정부도서관의 웹페이지를 캡쳐하여 클론코딩 하였습니다.</p>
+                  <span class="portfolio-modal__worker-number">1</span>
+                </div>
+                <div class="portfolio-modal__direct-link-wrap">
+                  <a class="portfolio-modal__direct-link" href="">Github 바로가기</a>
+                  <a class="portfolio-modal__direct-link" href="">웹페이지 바로가기</a>
+                </div>
+              </div>
+              <div class="portfolio-modal__description-wrap">
+                <div class="portfolio-modal__slide-wrap">
+                  <ul class="portfolio-modal__slide-list">
+                    <li class="portfolio-modal__slide-item active">
+                      <a href="images/img_slide_ujb1.jpg" target="_blink">
+                        <img src="images/img_slide_ujb1.jpg" alt="의정부도서관 첫번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_ujb2.jpg" target="_blink">
+                        <img src="images/img_slide_ujb2.jpg" alt="의정부도서관 두번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_ujb3.jpg" target="_blink">
+                        <img src="images/img_slide_ujb3.jpg" alt="의정부도서관 세번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="portfolio-modal__button-prev display-none" type="button">
+                    <span class="blind">왼쪽 버튼</span>
+                  </button>
+                  <button class="portfolio-modal__button-next" type="button">
+                    <span class="blind">오른쪽 버튼</span>
+                  </button>
+                </div>
+                <div class="portfolio-modal__explain-wrap">
+                  <dl>
+                    <dt>구현 페이지</dt>
+                    <dd>메인 페이지</dd>
+                  </dl>
+                </div>
+              </div>
+              <button class="portfolio-modal__btn-close" type="button">
+                <span class="blind">닫기 버튼</span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="portfolio__item">
+          <div class="portfolio__more-wrap portfolio__more-wrap--bg-activebox">
+            <button type="button" class="portfolio__btn-more">
+              <i class="fas fa-search-plus"></i>
+              <span class="blind">activebox 작업물 자세히 보기 버튼</span>
+            </button>
+          </div>
+          <div class="portfolio-modal">
+            <div class="portfolio-modal__body">
+              <div class="portfolio-modal__info-wrap">
+                <h3>Kixx</h3>
+                <div class="portfolio-modal__preface">
+                  <p>무료로 구한 PSD 템플릿을 보며 작업 하였습니다.</p>
+                  <span class="portfolio-modal__worker-number">1</span>
+                </div>
+                <div class="portfolio-modal__direct-link-wrap">
+                  <a class="portfolio-modal__direct-link" href="">Github 바로가기</a>
+                  <a class="portfolio-modal__direct-link" href="">웹페이지 바로가기</a>
+                </div>
+              </div>
+              <div class="portfolio-modal__description-wrap">
+                <div class="portfolio-modal__slide-wrap">
+                  <ul class="portfolio-modal__slide-list">
+                    <li class="portfolio-modal__slide-item active">
+                      <a href="images/img_slide_activebox1.jpg" target="_blink">
+                        <img src="images/img_slide_activebox1.jpg" alt="ACTIVE BOX 첫번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_activebox2.jpg" target="_blink">
+                        <img src="images/img_slide_activebox2.jpg" alt="ACTIVE BOX 두번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_activebox3.jpg" target="_blink">
+                        <img src="images/img_slide_activebox3.jpg" alt="ACTIVE BOX 세번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                    <li class="portfolio-modal__slide-item">
+                      <a href="images/img_slide_activebox4.jpg" target="_blink">
+                        <img src="images/img_slide_activebox4.jpg" alt="ACTIVE BOX 네번째 슬라이더 이미지">
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="portfolio-modal__button-prev display-none" type="button">
+                    <span class="blind">왼쪽 버튼</span>
+                  </button>
+                  <button class="portfolio-modal__button-next" type="button">
+                    <span class="blind">오른쪽 버튼</span>
+                  </button>
+                </div>
+                <div class="portfolio-modal__explain-wrap">
+                  <dl>
+                    <dt>구현 페이지</dt>
+                    <dd>메인 페이지</dd>
+                  </dl>
+                </div>
+              </div>
+              <button class="portfolio-modal__btn-close" type="button">
+                <span class="blind">닫기 버튼</span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- //portfolio__list -->
+    </section>
+    <!-- //portfolio -->
+  </main>
+  <!-- // main -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

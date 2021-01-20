@@ -1,0 +1,41 @@
+@import "variable";
+
+@mixin fontawesome {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+} 
+
+@mixin align-position {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin box-shadow {
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+/************************ breakpoints ***********************/
+
+@mixin extra-large {
+  @media (max-width: $breakpoints-extra-large) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: $breakpoints-large) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (max-width: $breakpoints-medium) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: $breakpoints-small) {
+    @content;
+  }
+}
