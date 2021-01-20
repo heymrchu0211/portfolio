@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all">
+    <meta name="description" content="웹퍼블리셔 지원자 김춘영의 포트폴리오 페이지입니다.">
+    <meta name="keywords" content="웹퍼블리셔,웹퍼블리싱,HTML,CSS,JavaScript,jQuery,웹표준,웹접근성,반응형웹">
+    <title>롯데자산개발</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- open graph -->
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="롯데자산개발">
+    <meta property="og:description" content="웹퍼블리셔 지원자 김춘영의 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="http://ccpub1133.dothome.co.kr/mypage/lotte/images/logo.png">
+    <meta property="og:url" content="http://ccpub1133.dothome.co.kr/mypage/lotte">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo_png.png" alt="롯데자산개발 로고">
+                </a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="company.html">회사소개</a>
+                        <ul>
+                            <li><a href="company.html">CEO 인사말</a></li>
+                            <li><a href="company.html">연혁</a></li>
+                            <li><a href="company.html">조직도</a></li>
+                            <li><a href="company.html">오시는 길</a></li>
+                            <li><a href="company.html">채용안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">사업영역</a>
+                        <ul>
+                            <li><a href="">쇼핑몰개발</a></li>
+                            <li><a href="">복합개발</a></li>
+                            <li><a href="">리조트개발</a></li>
+                            <li><a href="">자산관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">인재경영</a>
+                        <ul>
+                            <li><a href="">인재상</a></li>
+                            <li><a href="">인재양성</a></li>
+                            <li><a href="">채용안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="support.html">고객지원</a>
+                        <ul>
+                            <li><a href="support.html">공지사항</a></li>
+                            <li><a href="support.html">뉴스</a></li>
+                            <li><a href="support.html">고객문의</a></li>
+                            <li><a href="support.html">회사소개서</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+             <button type="button" class="btn_family">롯데가족</button>
+             <div class="login_wrap">
+                 <div class="login_inner">
+                    <div class="login_box">
+                        <form action="#" method="post">
+                            <div class="input_area">
+                                <input type="text" id="userId" name="userId" required>
+                                <label for="userId">아이디</label>
+                            </div>
+                            <div class="input_area">
+                                <input type="password" name="userPw" id="userPw" required>
+                                <label for="userPw">비밀번호</label>
+                            </div>
+                            <button class="btn_login">로그인</button>
+                        </form>
+                        <hr>
+                        <a href="" class="find">아이디와 비밀번호를 잊으셨나요?</a>
+                        <a href="" class="join">계정이 없으신가요? <span>가입하기</span></a>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+             </div>
+             <button type="button" class="btn_hamburger">
+                 <span></span>
+             </button>
+             <div class="all_menu_wrap">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="company.html">회사소개</a>
+                            <ul>
+                                <li><a href="">CEO 인사말</a></li>
+                                <li><a href="">연혁</a></li>
+                                <li><a href="">조직도</a></li>
+                                <li><a href="">오시는 길</a></li>
+                                <li><a href="">채용안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">사업영역</a>
+                            <ul>
+                                <li><a href="">쇼핑몰개발</a></li>
+                                <li><a href="">복합개발</a></li>
+                                <li><a href="">리조트개발</a></li>
+                                <li><a href="">자산관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">인재경영</a>
+                            <ul>
+                                <li><a href="">인재상</a></li>
+                                <li><a href="">인재양성</a></li>
+                                <li><a href="">채용안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">고객지원</a>
+                            <ul>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">고객문의</a></li>
+                                <li><a href="">회사소개서</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+        </div>
+    </header>
+    <!--//header -->
+    <main>
+        <section class="intro">
+            <div class="slide active">
+                <div class="slogan">
+                    <h2 class="main_tt">초고층빌딩 FM 전문기업</h2>
+                    <h3 class="sub_tt">
+                        롯데자산개발은 고객의 자산 가치 향상에<br> 
+                        더 나은 설계를 제안합니다.
+                    </h3>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slogan">
+                    <h2 class="main_tt">인간중심의 경영</h2>
+                    <h3 class="sub_tt">
+                        가치를 창조하는<br>
+                        롯데자산개발을 소개합니다.
+                    </h3>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slogan">
+                    <h2 class="main_tt">Your True Partner</h2>
+                    <h3 class="sub_tt">
+                        내·외부 고객과 함께 지속 성장하는<br>
+                        The Partner 롯데자산개발
+                    </h3>
+                </div>
+            </div>
+            <div class="container">
+                <span class="pager"></span>
+                <button type="button" class="btn_control">
+                    <i class="fas fa-pause"></i>
+                </button>
+            </div>
+        </section>
+        <!--//intro -->
+        <section class="value">
+            <div class="container">
+                <h2 class="main_tt">Value Management</h2>
+                <h3 class="sub_tt">
+                    외부 고객의 <em>자산 가치</em>를 높이고<br>
+                    내부 고객의 <em>시간 가치</em>를 높인다.
+                </h3>
+                <a href="" class="btn_more">
+                    <span>자세히 보기</span>
+                </a>
+            </div>
+        </section>
+        <!--//value -->
+        <section class="number">
+            <div class="container">
+                <h2 class="main_tt">숫자로 보는 롯데자산개발</h2>
+                <h3 class="sub_tt">
+                    신뢰를 바탕으로 하는 고객감동 구현,<br>
+                    <em>고객이 만족하는 정직한 롯데자산개발이 되겠습니다.</em>
+                </h3>
+                <ul class="contents_wrap">
+                    <li>
+                        <a href="" class="since">
+                            <h4 class="cont_tt">SINCE</h4>
+                            <span><em>1980</em>년</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="since">
+                            <h4 class="cont_tt">초고층빌딩</h4>
+                            <span><em>123</em>층</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="since">
+                            <h4 class="cont_tt">오픈 현장 수</h4>
+                            <span><em>75</em>개</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="since">
+                            <h4 class="cont_tt">업력</h4>
+                            <span><em>40</em>년</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="since">
+                            <h4 class="cont_tt">관리 연면적</h4>
+                            <span><em>140만</em>평</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>  
+        </section>
+        <!-- //number -->
+        <section class="business">
+            <div class="container">
+                <h2 class="main_tt">사업분야</h2>
+                <h3 class="sub_tt">
+                    롯데자산개발은 최고의 전문가들이 참여하여<br> 
+                    <em>고객의 모든 요구를 가능하게 만듭니다.</em>
+                </h3>
+                <ul class="contents_wrap">
+                    <li>
+                        <a href="" class="shopping">
+                            <h4 class="cont_tt">쇼핑몰개발</h4>
+                            <span>view more</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="complex">
+                            <h4 class="cont_tt">복합개발</h4>
+                            <span>view more</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="resort">
+                            <h4 class="cont_tt">리조트개발</h4>
+                            <span>view more</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="asset">
+                            <h4 class="cont_tt">자산관리</h4>
+                            <span>view more</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- //business -->
+        <section class="recruit">
+            <div class="container">
+                <h2 class="main_tt">사업분야</h2>
+                <h3 class="sub_tt">
+                    롯데자산개발은 소통을 기반으로 신뢰를 구축하며,<br> 
+                    <em>성공적인 파트너로써 밝은 미래를 함께 이루어 가고 있습니다.</em>
+                </h3>
+                <div class="contents_wrap">
+                    <ul>
+                        <li>
+                            <div class="item_box">
+                                <span class="icon">
+                                    <img src="images/icon_appear.png" alt="인재상 아이콘">
+                                </span>
+                                <h4 class="cont_tt">인재상</h4>
+                                <p>
+                                    롯데자산개발이 추구하는 인재상을<br>
+                                    여러분께 소개합니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_box">
+                                <span class="icon">
+                                    <img src="images/icon_grow.png" alt="인재양성 아이콘">
+                                </span>
+                                <h4 class="cont_tt">인재양성</h4>
+                                <p>
+                                    임직원의 역량 향상과 동기부여를 위해<br> 
+                                    다양한 제도를 운영합니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_box">
+                                <span class="icon">
+                                    <img src="images/icon_partner.png" alt="파트너사 아이콘">
+                                </span>
+                                <h4 class="cont_tt">파트너사</h4>
+                                <p>
+                                    소통을 바탕으로 신뢰와 안전를 구축한<br> 
+                                    다양한 파트너사를 소개합니다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //recruit -->
+    </main>
+    <footer>
+        <div class="container">
+            <div class="top">
+                <div class="company_info">
+                    <span>주식회사 롯데자산개발</span>
+                    <span>대표자 : 김경숙</span>
+                    <span>사업자등록번호 : 105-81-39283</span>
+                    <div>
+                        <span>[04059] 서울특별시 마포구 와우산로26길 8 (창전동)</span>
+                        <span>대표전화 : 02-338-1303</span>
+                        <span>팩스 : 02-338-2228</span>
+                    </div>
+                </div>
+                <div class="sns">
+                    <a href=""><img src="images/icon_youtube.png" alt="유튜브 아이콘"></a>
+                    <a href=""><img src="images/icon_blog.png" alt="네이버블로그 아이콘"></a>
+                </div>
+            </div>
+            <hr>
+            <div class="bottom">
+                <p>COPYRIGHT &copy; 2020.lotte Co., Ltd. ALL RIGHT RESERVED.</p>
+                <div class="policy">
+                    <a href="">개인정보처리방침</a>
+                    <a href="">이메일무단수집거부</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>
+
+
